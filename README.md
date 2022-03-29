@@ -1,6 +1,6 @@
 # windzo
 
-![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/preview.png)
+![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/master/preview.png)
 
 ## Project setup
 
