@@ -1,5 +1,3 @@
-# windzo
-
 <h1 align="center">Windzo Dashboard</h1>
 
 ![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/blob/master/preview.png)
