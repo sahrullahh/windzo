@@ -1,30 +1,41 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="flex bg-packed font-lexend">
+    <transition name="fade">
+      <div
+        id="sidebar-scroll"
+        class="flex-sidebar flex-auto w-sidebar lg:block hidden bg-white border-r-2 h-screen lg:z-0 z-40 overflow-auto lg:relative fixed"
+      >
+        <Sidebar />
+      </div>
+    </transition>
+    <div class="flex-auto w-full overflow-auto h-screen" id="body-scroll">
+      <Header />
+      <router-view />
+      <Footer />
+    </div>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+  // vue components
+  import Sidebar from "@/components/Sidebar";
+  import Header from "@/components/Header";
+  import Footer from "@/components/Footer";
+  // npmjs
+  import Scrollbar from "smooth-scrollbar";
+  import PerfectScrollbar from "perfect-scrollbar";
+  export default {
+    name: "App",
+    components: {
+      Header,
+      Footer,
+      Sidebar,
+    },
+    mounted() {
+      // const container = document.querySelector("#sidebar-scroll");
+      // const ps = new PerfectScrollbar(container);
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+      Scrollbar.init(document.querySelector("#body-scroll"));
+    },
+  };
+</script>
