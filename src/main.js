@@ -11,3 +11,8 @@ const app = createApp(App);
 app.use(router, Icon);
 app.use(VueApexCharts);
 app.mount("#app");
+
+router.beforeEach((to, from, next) => {
+  document.querySelector(".flex-sidebar").classList.toggle("hide");
+  next();
+});

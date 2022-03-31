@@ -4,7 +4,7 @@
     <transition name="fade">
       <div
         id="sidebar-scroll"
-        class="flex-sidebar flex-auto w-sidebar lg:block hidden bg-white border-r-2 h-screen lg:z-0 z-40 overflow-auto lg:relative fixed"
+        class="flex-sidebar lg:flex-auto w-sidebar lg:block hidden bg-white border-r-2 h-screen lg:z-0 z-40 overflow-auto lg:relative fixed"
       >
         <Sidebar />
       </div>

@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../views/Dashboard.vue";
 // Component Pages
 import Valert from "../views/components/alert.vue";
-
+import Vaccrodion from "../views/components/accordion.vue";
 var appname = " - Windzo Dashboard Template Admin";
 
 const routes = [
@@ -31,6 +31,12 @@ const routes = [
     name: "Valert",
     component: Valert,
     meta: { title: "Alert" + appname },
+  },
+  {
+    path: "/component/accordion",
+    name: "Vaccordion",
+    component: Vaccrodion,
+    meta: { title: "Accordion" + appname },
   },
 ];
 
