@@ -3,9 +3,11 @@
   <nav class="sidebar">
     <!-- sidebar head -->
     <div class="sidebar-head p-4">
-      <h2 class="text-2xl font-normal text-gray-800" translate="no">
-        Windzo<span class="text-primary">.</span>
-      </h2>
+      <router-link to="/" exact>
+        <h2 class="text-2xl font-normal text-gray-800" translate="no">
+          Windzo<span class="text-primary">.</span>
+        </h2>
+      </router-link>
       <button class="lg:hidden block float-right -mt-7" @click="sidebarToggle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -28,70 +30,77 @@
       <p class="font-medium text-gray-400">Menu</p>
       <div class="wrap-item mt-4">
         <div class="item">
-          <router-link to="/">
-            <button
-              class="text-white bg-primary w-full flex text-left rounded-md box-border p-3"
-            >
-              <span class="mr-3 text-xl"><Icon icon="bxs:dashboard" /></span>
-              <span class="w-full"> Dashboard </span>
-            </button>
+          <router-link
+            to="/"
+            exact
+            class="w-full flex text-left rounded-md box-border p-3"
+          >
+            <span class="mr-3 text-xl"><Icon icon="bxs:dashboard" /></span>
+            <span class="w-full"> Dashboard </span>
           </router-link>
         </div>
         <div class="item mt-3">
-          <router-link to="/">
-            <button
-              class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
-            >
-              <span class="mr-3 text-xl"><Icon icon="gg:components" /></span>
-              <span class="w-full"> Components </span>
-              <span class="box-border mt-1 text-gray-500">
-                <span class="float-right">
-                  <Icon icon="fa6-solid:angle-down" />
-                </span>
+          <button
+            class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
+          >
+            <span class="mr-3 text-xl"><Icon icon="gg:components" /></span>
+            <span class="w-full"> Components </span>
+            <span class="box-border mt-1 text-gray-500">
+              <span class="float-right">
+                <Icon icon="fa6-solid:angle-down" />
               </span>
+            </span>
+          </button>
+          <div class="panel hidden">
+            <router-link
+              to="/component/alert"
+              class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+            >
+              Alert
+            </router-link>
+            <router-link
+              to="/component/badge"
+              class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+            >
+              Badge
+            </router-link>
+            <router-link
+              to="/component/breadcumb"
+              class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+            >
+              Breadcumb
+            </router-link>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              Button
             </button>
-            <div class="panel hidden">
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Alert
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Badge
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Breadcumb
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Button
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Card
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Owl Carousel
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Dropdown
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                List Group
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Modal
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Navs
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Pagenation
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Progress
-              </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-                Tooltip
-              </button>
-            </div>
-          </router-link>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              Card
+            </button>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              Owl Carousel
+            </button>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              Dropdown
+            </button>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              List Group
+            </button>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              Modal
+            </button>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              Navs
+            </button>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              Pagenation
+            </button>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              Progress
+            </button>
+            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              Tooltip
+            </button>
+          </div>
         </div>
         <div class="item mt-3">
           <router-link to="/">
@@ -194,7 +203,10 @@
     </div>
   </nav>
 </template>
-
+<style>
+  .active {
+  }
+</style>
 <script>
   import { Icon } from "@iconify/vue";
   export default {
@@ -206,20 +218,6 @@
         document.querySelector(".flex-sidebar").classList.toggle("hide");
       },
     },
-    mounted() {
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
-    },
+    mounted() {},
   };
 </script>

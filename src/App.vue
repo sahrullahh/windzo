@@ -1,4 +1,5 @@
 <template>
+  <!-- App -->
   <div class="flex bg-packed font-lexend">
     <transition name="fade">
       <div
@@ -14,14 +15,15 @@
       <Footer />
     </div>
   </div>
+  <!-- end app -->
 </template>
 
 <script>
-  // vue components
+  // vue Components
   import Sidebar from "@/components/Sidebar";
   import Header from "@/components/Header";
   import Footer from "@/components/Footer";
-  // npmjs
+  // npm-js
   import Scrollbar from "smooth-scrollbar";
   import PerfectScrollbar from "perfect-scrollbar";
   export default {
@@ -32,10 +34,32 @@
       Sidebar,
     },
     mounted() {
-      // const container = document.querySelector("#sidebar-scroll");
-      // const ps = new PerfectScrollbar(container);
-
       Scrollbar.init(document.querySelector("#body-scroll"));
+
+      var alert_dis = document.querySelectorAll(".alert-dismiss");
+      alert_dis.forEach((x) =>
+        x.addEventListener("click", function () {
+          x.parentElement.classList.add("hidden");
+        })
+      );
+
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+            this.classList.remove("bg-gray-100");
+            this.classList.add("bg-transparent");
+          } else {
+            panel.style.display = "block";
+            this.classList.add("bg-gray-100");
+            this.classList.remove("bg-transparent");
+          }
+        });
+      }
     },
   };
 </script>
