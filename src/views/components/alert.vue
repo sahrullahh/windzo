@@ -370,5 +370,6 @@
     components: {
       Icon,
     },
+    mounted() {},
   };
 </script>

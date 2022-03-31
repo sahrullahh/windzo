@@ -36,12 +36,14 @@
     mounted() {
       Scrollbar.init(document.querySelector("#body-scroll"));
 
-      var alert_dis = document.querySelectorAll(".alert-dismiss");
-      alert_dis.forEach((x) =>
-        x.addEventListener("click", function () {
-          x.parentElement.classList.add("hidden");
-        })
-      );
+      setTimeout(() => {
+        var alert_dis = document.querySelectorAll(".alert-dismiss");
+        alert_dis.forEach((x) =>
+          x.addEventListener("click", function () {
+            x.parentElement.classList.add("hidden");
+          })
+        );
+      }, 100);
 
       var acc = document.getElementsByClassName("accordion");
       var i;
