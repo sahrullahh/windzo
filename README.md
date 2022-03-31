@@ -18,9 +18,11 @@ This repository ready to contribute
 ## Installation
 
 <p>1. clone this repo first or download zip code </p>
+
 ```
-git clone https://github.com/sahrullahh/windzo.git 
+git clone https://github.com/sahrullahh/windzo.git
 ```
+
 <p>2. Open windzo folder and follow the step </p>
 
 ## Step to run this app
