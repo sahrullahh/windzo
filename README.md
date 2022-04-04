@@ -14,7 +14,7 @@ this repo for new commit update 😁</p>
 
 ## Live Demo
 
-Click <a href="https://windzo.vercel.app/">here.</a>
+Click here to <a href="https://windzo.vercel.app/">Live Demo.</a>
 
 ## Installation
 
