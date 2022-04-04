@@ -1,19 +1,20 @@
 <h1 align="center">Windzo Dashboard Admin</h1>
-<h3 align="center">this app on development 😁</h3>
+<p align="center">this dashboard app on development fork 
+this repo for new commit update 😁</p>
+
+<div align="center">
+<img src="https://img.shields.io/github/repo-size/sahrullahh/windzo" />
+<img src="https://img.shields.io/github/license/sahrullahh/windzo" />
+<img src="https://img.shields.io/npm/v/vue">
+</div>
 
 ![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/blob/master/preview.png)
 
-<p align="center">windzo is a free admin dashboard template, using vue js and tailwind css framework, build your app easily and fast.</p>
+<p align="center">Windzo is a free open source dashboard admin template, using vue js and tailwind css framework, make your app build easily and fast.</p>
 
-<img src="https://img.shields.io/github/repo-size/sahrullahh/windzo" />
+## Live Demo
 
-## Author
-
-Windzo is created by <a href="https://github.com/sahrullahh">Mohammad Sahrullah.</a>
-
-## Open Contribute
-
-This repository ready to contribute
+Click <a href="https://windzo.vercel.app/">here.</a>
 
 ## Installation
 
@@ -75,6 +76,21 @@ using yarn :
 yarn build
 ```
 
-### Customize configuration
+## Open Contribute
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This repository ready to contribute
+
+##### Contribute Guide
+
+- Fork this repository
+- `npm install` or `yarn install`
+- make change
+- open pull request
+
+## Author
+
+Windzo is created by <a href="https://github.com/sahrullahh">Mohammad Sahrullah.</a>
+
+## License
+
+[MIT](https://github.com/sahrullahh/windzo/blob/master/LICENSE.md)
