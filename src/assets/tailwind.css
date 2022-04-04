@@ -23,6 +23,12 @@
     }
   }
 }
+.open-accordion {
+  transform: rotate(137deg);
+}
+.close-accordion {
+  transform: rotate(0deg);
+}
 
 .fade-enter-active,
 .fade-leave-active {

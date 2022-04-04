@@ -29,7 +29,7 @@
         <h2
           class="text-md text-indigo-800 ml-3 lg:block hidden px-5 p-2 rounded-md bg-indigo-200"
         >
-          You can customize this dashboard template
+          Welcome back, Mohammad Sahrullah
         </h2>
       </div>
       <div class="mr-5 flex">
@@ -48,7 +48,7 @@
         <button class="mr-5 text-2xl text-gray-500">
           <Icon icon="clarity:notification-line" />
         </button>
-        <button @click="menuToggle">
+        <button @click="menuToggle" @blur="menuToggle">
           <div
             class="user-avatar flex hover:bg-gray-100 p-1 cursor-pointer rounded-md"
           >
@@ -127,7 +127,7 @@
         this.menu = !this.menu;
       },
       sidebarToggle: function () {
-        document.querySelector(".flex-sidebar").classList.toggle("hide");
+        document.querySelector(".flex-sidebar").classList.remove("hidden");
       },
     },
     mounted() {},

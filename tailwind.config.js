@@ -6,6 +6,9 @@ module.exports = {
         sidebar: "350px",
         search: "400px",
       },
+      rotate: {
+        137: "137deg",
+      },
       backgroundColor: {
         packed: "#EEF6FF",
         // packed: "#f2f2f2", you can use this color if you like

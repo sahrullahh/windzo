@@ -5,7 +5,8 @@ import Dashboard from "../views/Dashboard.vue";
 // Component Pages
 import Valert from "../views/components/alert.vue";
 import Vaccrodion from "../views/components/accordion.vue";
-var appname = " - Windzo Dashboard Template Admin";
+import Vbadges from "../views/components/badges.vue";
+var appname = " - Windzo Dashboard Admin Template";
 
 const routes = [
   // Routes
@@ -37,6 +38,12 @@ const routes = [
     name: "Vaccordion",
     component: Vaccrodion,
     meta: { title: "Accordion" + appname },
+  },
+  {
+    path: "/component/badge",
+    name: "Vbadge",
+    component: Vbadges,
+    meta: { title: "Badge" + appname },
   },
 ];
 

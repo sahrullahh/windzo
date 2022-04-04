@@ -75,7 +75,7 @@
     <!-- grid wrapper card -->
     <div class="grid lg:grid-cols-2 grid-col-1 gap-4 mt-5">
       <!-- default alert  -->
-      <div class="card col-span-1 bg-white w-full rounded-md p-5 shadow">
+      <div class="card bg-white w-full rounded-md p-5 shadow">
         <h2>Default</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
           <div
@@ -370,6 +370,13 @@
     components: {
       Icon,
     },
-    mounted() {},
+    mounted() {
+      var alert_dis = document.querySelectorAll(".alert-dismiss");
+      alert_dis.forEach((x) =>
+        x.addEventListener("click", function () {
+          x.parentElement.classList.add("hidden");
+        })
+      );
+    },
   };
 </script>

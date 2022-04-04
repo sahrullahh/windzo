@@ -40,149 +40,117 @@
           </router-link>
         </div>
         <div class="item mt-3">
-          <button
-            class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
-          >
-            <span class="mr-3 text-xl"><Icon icon="gg:components" /></span>
-            <span class="w-full"> Components </span>
-            <span class="box-border mt-1 text-gray-500">
-              <span class="float-right">
-                <Icon icon="fa6-solid:angle-down" />
-              </span>
-            </span>
-          </button>
-          <div class="panel hidden">
-            <router-link
-              to="/component/alert"
-              class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
-            >
-              Alert
-            </router-link>
-            <router-link
-              to="/component/accordion"
-              class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
-            >
-              Accordion
-            </router-link>
-            <router-link
-              to="/component/badge"
-              class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
-            >
-              Badge
-            </router-link>
-            <router-link
-              to="/component/breadcumb"
-              class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
-            >
-              Breadcumb
-            </router-link>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Button
-            </button>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Card
-            </button>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Owl Carousel
-            </button>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Dropdown
-            </button>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              List Group
-            </button>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Modal
-            </button>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Navs
-            </button>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Pagenation
-            </button>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Progress
-            </button>
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Tooltip
-            </button>
-          </div>
+          <menu-accordion>
+            <template v-slot:icon>
+              <Icon icon="gg:components" />
+            </template>
+            <template v-slot:title> Components </template>
+            <template v-slot:content>
+              <router-link
+                to="/component/alert"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+              >
+                Alert
+              </router-link>
+              <router-link
+                to="/component/accordion"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+              >
+                Accordion
+              </router-link>
+              <router-link
+                to="/component/badge"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+              >
+                Badge
+              </router-link>
+              <router-link
+                to="/component/breadcumb"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+              >
+                Breadcumb
+              </router-link>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                Button
+              </button>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                Card
+              </button>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                Owl Carousel
+              </button>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                Dropdown
+              </button>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                List Group
+              </button>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                Modal
+              </button>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                Navs
+              </button>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                Pagenation
+              </button>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                Progress
+              </button>
+              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+                Tooltip
+              </button>
+            </template>
+          </menu-accordion>
         </div>
         <div class="item mt-3">
-          <router-link to="/">
-            <button
-              class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
-            >
-              <span class="mr-3 text-xl"><Icon icon="bi:layout-wtf" /></span>
-              <span class="w-full"> Layouts </span>
-              <span class="box-border mt-1 text-gray-500">
-                <span class="float-right">
-                  <Icon icon="fa6-solid:angle-down" />
-                </span>
-              </span>
-            </button>
-            <div class="panel hidden">
+          <menu-accordion>
+            <template v-slot:icon>
+              <Icon icon="bi:layout-wtf" />
+            </template>
+            <template v-slot:title> Layouts </template>
+            <template v-slot:content>
               <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
                 Coming Soon
               </button>
-            </div>
-          </router-link>
+            </template>
+          </menu-accordion>
         </div>
       </div>
       <p class="font-medium text-gray-400 mt-4">UI Form & Tables</p>
 
       <div class="item mt-3">
-        <router-link to="/">
-          <button
-            class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
-          >
-            <span class="mr-3 text-xl"
-              ><Icon icon="ant-design:form-outlined"
-            /></span>
-            <span class="w-full"> Form Element </span>
-            <span class="box-border mt-1 text-gray-500">
-              <span class="float-right">
-                <Icon icon="fa6-solid:angle-down" />
-              </span>
-            </span>
-          </button>
-          <div class="panel hidden">
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Coming Soon
-            </button>
-          </div>
-        </router-link>
+        <menu-accordion>
+          <template v-slot:icon>
+            <Icon icon="ant-design:form-outlined" />
+          </template>
+          <template v-slot:title> Form Element </template>
+          <template v-slot:content>
+            <p>
+              <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit.
+              Quia, porro. Non a excepturi, voluptatibus ipsam magnam, eligendi,
+              accusantium ipsa quae quis praesentium voluptate saepe ullam sint
+              ea itaque consectetur impedit?
+            </p>
+          </template>
+        </menu-accordion>
       </div>
+
       <div class="item mt-3">
-        <router-link to="/">
-          <button
-            class="text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
-          >
-            <span class="mr-3 text-xl"><Icon icon="clarity:form-line" /></span>
-            <span class="w-full"> Form Layout </span>
-            <span class="box-border mt-1 text-gray-500"> </span>
-          </button>
-        </router-link>
-      </div>
-      <div class="item mt-3">
-        <router-link to="/">
-          <button
-            class="accordion text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
-          >
-            <span class="mr-3 text-xl"><Icon icon="mdi:form-textbox" /></span>
-            <span class="w-full"> Form Editor </span>
-            <span class="box-border mt-1 text-gray-500">
-              <span class="float-right">
-                <Icon icon="fa6-solid:angle-down" />
-              </span>
-            </span>
-          </button>
-          <div class="panel hidden">
-            <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
-              Coming Soon
-            </button>
-          </div>
-        </router-link>
+        <menu-accordion>
+          <template v-slot:icon>
+            <Icon icon="mdi:form-textbox" />
+          </template>
+          <template v-slot:title> Form Editor </template>
+          <template v-slot:content>
+            <p>
+              <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit.
+              Quia, porro. Non a excepturi, voluptatibus ipsam magnam, eligendi,
+              accusantium ipsa quae quis praesentium voluptate saepe ullam sint
+              ea itaque consectetur impedit?
+            </p>
+          </template>
+        </menu-accordion>
       </div>
       <div class="item mt-3">
         <router-link to="/">
@@ -215,13 +183,15 @@
 </style>
 <script>
   import { Icon } from "@iconify/vue";
+  import MenuAccordion from "./MenuAccordion.vue";
   export default {
     components: {
       Icon,
+      MenuAccordion,
     },
     methods: {
       sidebarToggle: function () {
-        document.querySelector(".flex-sidebar").classList.toggle("hide");
+        document.querySelector(".flex-sidebar").classList.add("hidden");
       },
     },
     mounted() {},
