@@ -170,15 +170,21 @@
       );
 
       // Change the icons inside the button based on previous settings
-      if (
-        localStorage.getItem("color-theme") === "dark" ||
-        !("color-theme" in localStorage)
-      ) {
-        document.documentElement.classList.add("dark");
-        themeToggleLightIcon.classList.remove("hidden");
-      } else {
+
+      if (!localStorage.getItem("colot-theme")) {
         document.documentElement.classList.remove("dark");
         themeToggleDarkIcon.classList.remove("hidden");
+      } else {
+        if (
+          localStorage.getItem("color-theme") === "dark" ||
+          !("color-theme" in localStorage)
+        ) {
+          document.documentElement.classList.add("dark");
+          themeToggleLightIcon.classList.remove("hidden");
+        } else {
+          document.documentElement.classList.remove("dark");
+          themeToggleDarkIcon.classList.remove("hidden");
+        }
       }
 
       // // if set via local storage previously
