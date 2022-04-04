@@ -8,9 +8,19 @@ this repo for new commit update 😁</p>
 <img src="https://img.shields.io/npm/v/vue">
 </div>
 
-![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/blob/master/preview.png)
-
 <p align="center">Windzo is a free open source dashboard admin template, using vue js and tailwind css framework, make your app build easily and fast.</p>
+
+### Light mode
+
+<!-- <img src="./windzo-light-mode.png" /> -->
+
+![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/blob/master/windzo-light-mode.png)
+
+### Dark mode
+
+![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/blob/master/windzo-dark-mode.png)
+
+<!-- <img src="./windzo-dark-mode.png" /> -->
 
 ## Live Demo
 
@@ -93,4 +103,4 @@ Windzo is created by <a href="https://github.com/sahrullahh">Mohammad Sahrullah.
 
 ## License
 
-[MIT](https://github.com/sahrullahh/windzo/blob/master/LICENSE.md)
+[MIT](https://github.com/sahrullahh/windzo/blob/master/LICENSE)

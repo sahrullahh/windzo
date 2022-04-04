@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import { Icon } from "@iconify/vue";
 import VueApexCharts from "vue3-apexcharts";
+// import "flowbite";
 import "./assets/tailwind.css";
 import "./assets/animate.css";
 import "./assets/sass/css/windzo.css";

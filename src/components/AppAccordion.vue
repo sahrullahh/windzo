@@ -1,11 +1,11 @@
 <template>
   <button
     @click="toggleAccordion()"
-    class="text-gray-800 bg-transparent border hover:bg-gray-200 w-full flex text-left rounded-md box-border p-3"
+    class="text-gray-800 dark:text-gray-500 bg-transparent border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-200 w-full flex text-left rounded-md box-border p-3"
     :aria-expanded="isOpen"
     :aria-controls="`collapse${_uid}`"
     :class="{
-      'bg-gray-200': isOpen,
+      'bg-gray-200 dark:bg-gray-700': isOpen,
       'bg-transparent': !isOpen,
     }"
   >
@@ -16,7 +16,7 @@
       <slot name="title" />
     </span>
     <span
-      class="box-border mt-1 text-gray-500"
+      class="box-border mt-1 text-gray-500 dark:text-gray-600"
       :class="{
         'rotate-180': isOpen,
         'rotate-0': !isOpen,
@@ -28,7 +28,11 @@
     </span>
   </button>
 
-  <div v-show="isOpen" :id="`collapse${_uid}`" class="p-3 bg-gray-100">
+  <div
+    v-show="isOpen"
+    :id="`collapse${_uid}`"
+    class="p-3 mt-2 bg-gray-100 dark:bg-gray-700"
+  >
     <slot name="content" />
   </div>
 </template>

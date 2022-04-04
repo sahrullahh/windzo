@@ -66,7 +66,9 @@
     </nav>
     <!-- end nav -->
     <div class="mt-5 w-full">
-      <h1 class="text-2xl text-gray-900 font-medium">Badge</h1>
+      <h1 class="text-2xl text-gray-900 font-medium dark:text-gray-200">
+        Badge
+      </h1>
       <p class="mt-1 text-sm font-normal text-gray-400">
         badges are used for labeled text or counting like e-commerce shopping
         cart notifications and other.
@@ -74,8 +76,8 @@
     </div>
 
     <div class="grid grid-cols-2 gap-2 mt-3">
-      <div class="card bg-white w-full rounded-md p-5 shadow">
-        <h2>Badge count notification</h2>
+      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+        <h2 class="dark:text-gray-200">Badge count notification</h2>
         <div class="wrapper-badge w-full box-border flex gap-4 mt-4">
           <span class="bg-blue-700 rounded-full py-1 px-3 text-white">57</span>
           <span class="bg-green-600 rounded-full py-1 px-3 text-white">0</span>
@@ -100,8 +102,8 @@
           >
         </div>
       </div>
-      <div class="card bg-white w-full rounded-md p-5 shadow">
-        <h2>Badge labeled</h2>
+      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+        <h2 class="dark:text-gray-200">Badge labeled</h2>
         <div class="wrapper-badge w-full box-border flex gap-4 mt-4">
           <span class="bg-blue-700 rounded-md py-1 px-4 text-white"
             >ongoing</span
@@ -127,8 +129,8 @@
           >
         </div>
       </div>
-      <div class="card bg-white w-full rounded-md p-5 shadow">
-        <h2>Badge Light count notification</h2>
+      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+        <h2 class="dark:text-gray-200">Badge Light count notification</h2>
         <div class="wrapper-badge w-full box-border flex gap-4 mt-4">
           <span class="bg-blue-200 rounded-full py-1 px-2 text-blue-700"
             >57</span
@@ -160,8 +162,8 @@
           >
         </div>
       </div>
-      <div class="card bg-white w-full rounded-md p-5 shadow">
-        <h2>Badge Light labeled</h2>
+      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+        <h2 class="dark:text-gray-200">Badge Light labeled</h2>
         <div class="wrapper-badge w-full box-border flex gap-4 mt-4">
           <span class="bg-blue-200 rounded-md py-1 px-4 text-blue-700"
             >ongoing</span

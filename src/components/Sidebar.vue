@@ -1,11 +1,18 @@
 <template>
   <!-- sidebar -->
-  <nav class="sidebar">
+  <nav class="sidebar bg-white dark:bg-gray-800">
     <!-- sidebar head -->
     <div class="sidebar-head p-4">
       <router-link to="/" exact>
-        <h2 class="text-2xl font-normal text-gray-800" translate="no">
+        <h2
+          class="text-2xl font-normal text-gray-800 dark:text-gray-500"
+          translate="no"
+        >
           Windzo<span class="text-primary">.</span>
+          <span
+            class="bg-gray-700 absolute mt-2 dark:block hidden rounded-md py-1 px-2 text-xs text-gray-200"
+            >Dark mode</span
+          >
         </h2>
       </router-link>
       <button class="lg:hidden block float-right -mt-7" @click="sidebarToggle">
@@ -27,13 +34,13 @@
     </div>
     <!-- sidebar list -->
     <div class="sidebar-list p-4 mt-4">
-      <p class="font-medium text-gray-400">Menu</p>
-      <div class="wrap-item mt-4">
+      <p class="font-medium text-gray-400 dark:text-gray-600">Menu</p>
+      <div class="wrap-item mt-4 dark:text-gray-500">
         <div class="item">
           <router-link
             to="/"
             exact
-            class="w-full flex text-left rounded-md box-border p-3"
+            class="w-full flex text-left rounded-md box-border p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
           >
             <span class="mr-3 text-xl"><Icon icon="bxs:dashboard" /></span>
             <span class="w-full"> Dashboard </span>
@@ -48,56 +55,76 @@
             <template v-slot:content>
               <router-link
                 to="/component/alert"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Alert
               </router-link>
               <router-link
                 to="/component/accordion"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Accordion
               </router-link>
               <router-link
                 to="/component/badge"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Badge
               </router-link>
               <router-link
                 to="/component/breadcumb"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Breadcumb
               </router-link>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Button
               </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Card
               </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Owl Carousel
               </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Dropdown
               </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 List Group
               </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Modal
               </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Navs
               </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Pagenation
               </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Progress
               </button>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Tooltip
               </button>
             </template>
@@ -110,14 +137,18 @@
             </template>
             <template v-slot:title> Layouts </template>
             <template v-slot:content>
-              <button class="w-full text-left rounded-md p-3 hover:bg-gray-100">
+              <button
+                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
                 Coming Soon
               </button>
             </template>
           </menu-accordion>
         </div>
       </div>
-      <p class="font-medium text-gray-400 mt-4">UI Form & Tables</p>
+      <p class="font-medium text-gray-400 mt-4 dark:text-gray-600">
+        UI Form & Tables
+      </p>
 
       <div class="item mt-3">
         <menu-accordion>
@@ -155,7 +186,7 @@
       <div class="item mt-3">
         <router-link to="/">
           <button
-            class="text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
+            class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
           >
             <span class="mr-3 text-xl"><Icon icon="bi:table" /></span>
             <span class="w-full"> Table </span>
@@ -166,7 +197,7 @@
       <div class="item mt-3">
         <router-link to="/">
           <button
-            class="text-gray-800 bg-transparent hover:bg-gray-100 w-full flex text-left rounded-md box-border p-3"
+            class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
           >
             <span class="mr-3 text-xl"><Icon icon="carbon:data-table" /></span>
             <span class="w-full"> DataTables </span>

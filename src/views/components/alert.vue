@@ -66,7 +66,9 @@
     </nav>
     <!-- end nav -->
     <div class="mt-5 w-full">
-      <h1 class="text-2xl text-gray-900 font-medium">Alert</h1>
+      <h1 class="text-2xl text-gray-900 font-medium dark:text-gray-200">
+        Alert
+      </h1>
       <p class="mt-1 text-sm font-normal text-gray-400">
         This Alert component helps you to notify about success and danger
         messages.
@@ -75,8 +77,8 @@
     <!-- grid wrapper card -->
     <div class="grid lg:grid-cols-2 grid-col-1 gap-4 mt-5">
       <!-- default alert  -->
-      <div class="card bg-white w-full rounded-md p-5 shadow">
-        <h2>Default</h2>
+      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+        <h2 class="dark:text-gray-200">Default</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
           <div
             class="primary-alert bg-blue-500 py-3 px-5 text-white w-full box-border rounded-md"
@@ -121,8 +123,10 @@
         </div>
       </div>
       <!-- heading alert  -->
-      <div class="card row-span-2 bg-white w-full rounded-md p-5 shadow">
-        <h2>Heading</h2>
+      <div
+        class="card row-span-2 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+      >
+        <h2 class="dark:text-gray-200">Heading</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
           <div
             class="primary-alert bg-blue-500 py-3 px-5 text-white w-full box-border rounded-md"
@@ -175,8 +179,10 @@
         </div>
       </div>
       <!-- With icon alert -->
-      <div class="card row-span-3 bg-white w-full rounded-md p-5 shadow">
-        <h2>With icon alert</h2>
+      <div
+        class="card row-span-3 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+      >
+        <h2 class="dark:text-gray-200">With icon alert</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
           <div
             class="primary-alert bg-blue-500 flex py-3 px-5 text-white w-full box-border rounded-md"
@@ -219,7 +225,7 @@
             <span> Hello iam alert dark </span>
           </div>
           <div
-            class="secondary-alert bg-gray-300 flex py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            class="secondary-alert bg-gray-300 dark:bg-gray-800 flex py-3 px-5 text-gray-800 w-full box-border rounded-md"
           >
             <span class="text-2xl mr-3">
               <Icon icon="bx:cog" />
@@ -245,8 +251,10 @@
         </div>
       </div>
       <!-- Dismis alert  -->
-      <div class="card row-span-4 bg-white w-full rounded-md p-5 shadow">
-        <h2>Dismissable Alert</h2>
+      <div
+        class="card row-span-4 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+      >
+        <h2 class="dark:text-gray-200">Dismissable Alert</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
           <div
             class="primary-alert bg-blue-500 py-3 px-5 text-white w-full box-border rounded-md"
@@ -315,8 +323,10 @@
         </div>
       </div>
       <!-- Light alert  -->
-      <div class="card row-span-4 bg-white w-full rounded-md p-5 shadow">
-        <h2>Light alert</h2>
+      <div
+        class="card row-span-4 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+      >
+        <h2 class="dark:text-gray-200">Light alert</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
           <div
             class="primary-alert bg-blue-200 py-3 px-5 text-blue-800 border-2 border-blue-800 w-full box-border rounded-md"

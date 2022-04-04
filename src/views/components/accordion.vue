@@ -66,7 +66,9 @@
     </nav>
     <!-- end nav -->
     <div class="mt-5 w-full">
-      <h1 class="text-2xl text-gray-900 font-medium">Accordion</h1>
+      <h1 class="text-2xl text-gray-900 font-medium dark:text-gray-200">
+        Accordion
+      </h1>
       <p class="mt-1 text-sm font-normal text-gray-400">
         Accordion use for vertically stacked content that with a click on a
         heading or down arrow, expands to show rolled up content.
@@ -76,10 +78,10 @@
     <div class="grid lg:grid-cols-1 grid-col-1 gap-4 mt-5">
       <!-- default alert  -->
       <div
-        class="card col-span-1 grid grid-cols-1 gap-5 bg-white w-full rounded-md p-5 shadow"
+        class="card col-span-1 grid grid-cols-1 gap-5 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
       >
         <div class="accordion-packed">
-          <h2 class="font-semibold">Accordion Default</h2>
+          <h2 class="font-semibold dark:text-gray-200">Accordion Default</h2>
           <div class="wrapper mt-5">
             <!-- copy this component  -->
             <app-accordion>
@@ -97,8 +99,8 @@
           </div>
         </div>
         <div class="accordion-packed">
-          <h2 class="font-semibold">Accordion With icon</h2>
-          <p class="mt-1">
+          <h2 class="font-semibold dark:text-gray-200">Accordion With icon</h2>
+          <p class="mt-1 dark:text-gray-200">
             you can add
             <span class="bg-gray-200 text-red-500"> v-slot:icon </span>
             above the title slot and add icon inside slot with element
@@ -130,10 +132,10 @@
         </div>
       </div>
       <div
-        class="card row-span-1 grid grid-cols-1 gap-5 bg-white w-full rounded-md p-5 shadow"
+        class="card row-span-1 grid grid-cols-1 gap-5 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
       >
         <div class="accordion-packed">
-          <h2 class="font-semibold">Accordion Menu Only</h2>
+          <h2 class="font-semibold dark:text-gray-200">Accordion Menu Only</h2>
           <div class="wrapper mt-5">
             <!-- copy this component  -->
             <menu-accordion>
@@ -151,8 +153,10 @@
           </div>
         </div>
         <div class="accordion-packed">
-          <h2 class="font-semibold">Accordion Menu With icon</h2>
-          <p class="mt-1">
+          <h2 class="font-semibold dark:text-gray-200">
+            Accordion Menu With icon
+          </h2>
+          <p class="mt-1 dark:text-gray-200">
             you can add
             <span class="bg-gray-200 text-red-500"> v-slot:icon </span>
             above the title slot and add icon inside slot with element

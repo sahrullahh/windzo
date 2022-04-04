@@ -24,14 +24,18 @@
     </nav>
     <!-- end nav -->
     <div class="mt-5 w-full">
-      <h1 class="text-2xl text-gray-900 font-medium">Dashboard</h1>
+      <h1 class="text-2xl text-gray-900 dark:text-gray-200 font-medium">
+        Dashboard
+      </h1>
     </div>
     <!-- grid wrapper card -->
     <div
       class="wrapper-card grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-2 mt-5"
     >
       <!-- card  -->
-      <div class="card bg-white w-full rounded-md p-5 shadow flex">
+      <div
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow flex"
+      >
         <div class="p-2 max-w-sm">
           <div
             class="bg-orange-200 rounded-full w-14 h-14 text-lg p-3 text-orange-600 mx-auto"
@@ -56,12 +60,16 @@
         </div>
 
         <div class="block p-2 w-full">
-          <p class="font-semibold text-gray-900 text-xl">Rp.2 300 908</p>
+          <p class="font-semibold text-gray-900 dark:text-gray-200 text-xl">
+            Rp.2 300 908
+          </p>
           <h2 class="font-normal text-gray-400 text-md mt-1">Total Payouts</h2>
         </div>
       </div>
       <!-- end card -->
-      <div class="card bg-white w-full rounded-md p-5 shadow flex">
+      <div
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow flex"
+      >
         <div class="p-2 max-w-sm">
           <div
             class="bg-green-200 rounded-full w-14 h-14 text-lg p-3 text-green-600 mx-auto"
@@ -86,12 +94,16 @@
         </div>
 
         <div class="block p-2 w-full">
-          <p class="font-semibold text-gray-900 text-xl">256</p>
+          <p class="font-semibold text-gray-900 dark:text-gray-200 text-xl">
+            256
+          </p>
           <h2 class="font-normal text-gray-400 text-md mt-1">Total Sales</h2>
         </div>
       </div>
       <!-- end card -->
-      <div class="card bg-white w-full rounded-md p-5 shadow flex">
+      <div
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow flex"
+      >
         <div class="p-2 max-w-sm">
           <div
             class="bg-red-200 rounded-full w-14 h-14 text-lg p-3 text-red-600 mx-auto"
@@ -120,14 +132,18 @@
         </div>
 
         <div class="block p-2 w-full">
-          <p class="font-semibold text-gray-900 text-xl">356</p>
+          <p class="font-semibold text-gray-900 dark:text-gray-200 text-xl">
+            356
+          </p>
           <h2 class="font-normal text-gray-400 text-md mt-1">
             Total Customers
           </h2>
         </div>
       </div>
       <!-- end card -->
-      <div class="card bg-white w-full rounded-md p-5 shadow flex">
+      <div
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow flex"
+      >
         <div class="p-2 max-w-sm">
           <div
             class="bg-purple-200 rounded-full w-14 h-14 text-lg p-3 text-purple-600 mx-auto"
@@ -154,7 +170,9 @@
         </div>
 
         <div class="block p-2 w-full">
-          <p class="font-semibold text-gray-900 text-xl">7 230</p>
+          <p class="font-semibold text-gray-900 dark:text-gray-200 text-xl">
+            7 230
+          </p>
           <h2 class="font-normal text-gray-400 text-md mt-1">Total Visit</h2>
         </div>
       </div>
@@ -162,8 +180,12 @@
     </div>
     <!-- end wrapper card -->
     <div class="mt-5 lg:flex block lg:gap-4">
-      <div class="bg-white p-5 w-full rounded-md box-border shadow">
-        <h2 class="font-bold text-lg text-gray-800">Total Sales</h2>
+      <div
+        class="bg-white dark:bg-gray-800 p-5 w-full rounded-md box-border shadow"
+      >
+        <h2 class="font-bold text-lg text-gray-800 dark:text-gray-200">
+          Total Sales
+        </h2>
         <br />
         <apexchart
           width="100%"
@@ -173,10 +195,10 @@
           :series="seriesLine"
         ></apexchart>
       </div>
-      <div class="bg-white p-5 w-96 shadow">
-        <h2>Partner Store</h2>
+      <div class="bg-white dark:bg-gray-800 p-5 w-96 shadow">
+        <h2 class="dark:text-gray-200">Partner Store</h2>
 
-        <p class="font-bold font-lg mt-5">Online</p>
+        <p class="font-bold font-lg mt-5 dark:text-gray-200">Online</p>
         <div class="mt-4 grid grid-cols-1 gap-4">
           <button class="w-full box-border flex gap-4">
             <span>
@@ -189,8 +211,10 @@
               />
             </span>
             <span class="text-left">
-              <h1 class="font-bold text-xl">Elizabeth Begum</h1>
-              <p>online</p>
+              <h1 class="font-bold text-xl dark:text-gray-200">
+                Elizabeth Begum
+              </h1>
+              <p class="dark:text-gray-200">online</p>
             </span>
           </button>
           <button class="w-full box-border flex gap-4">
@@ -204,8 +228,8 @@
               />
             </span>
             <span class="text-left">
-              <h1 class="font-bold text-xl">Ethan Roger</h1>
-              <p>online</p>
+              <h1 class="font-bold text-xl dark:text-gray-200">Ethan Roger</h1>
+              <p class="dark:text-gray-200">online</p>
             </span>
           </button>
         </div>
@@ -221,11 +245,13 @@
               />
             </span>
             <span class="text-left">
-              <h1 class="font-bold text-xl">Tobi Ferreira</h1>
-              <p>online</p>
+              <h1 class="font-bold text-xl dark:text-gray-200">
+                Tobi Ferreira
+              </h1>
+              <p class="dark:text-gray-200">online</p>
             </span>
           </button>
-          <p class="font-bold font-lg mt-5">Offline</p>
+          <p class="font-bold font-lg mt-5 dark:text-gray-200">Offline</p>
           <button class="w-full box-border flex gap-4">
             <span>
               <img
@@ -237,8 +263,8 @@
               />
             </span>
             <span class="text-left">
-              <h1 class="font-bold text-xl">Taylor Neal</h1>
-              <p>2 Hours later</p>
+              <h1 class="font-bold text-xl dark:text-gray-200">Taylor Neal</h1>
+              <p class="dark:text-gray-200">2 Hours ago</p>
             </span>
           </button>
           <button class="w-full box-border flex gap-4">
@@ -252,8 +278,8 @@
               />
             </span>
             <span class="text-left">
-              <h1 class="font-bold text-xl">Bruno Barron</h1>
-              <p>4 Hours later</p>
+              <h1 class="font-bold text-xl dark:text-gray-200">Bruno Barron</h1>
+              <p class="dark:text-gray-200">4 Hours ago</p>
             </span>
           </button>
         </div>

@@ -2,5 +2,9 @@
   .exact-active {
     background: #4f46e5;
     color: #f2f2f2;
+    &:hover {
+      background: #4f46e5 !important;
+      color: #f2f2f2;
+    }
   }
 }

@@ -1,10 +1,10 @@
 <template>
   <!-- App -->
-  <div class="flex bg-packed font-lexend">
+  <div class="flex bg-packed font-lexend dark:bg-gray-900">
     <transition name="fade">
       <div
         id="sidebar-scroll"
-        class="flex-sidebar lg:flex-auto w-sidebar lg:block hidden bg-white border-r-2 h-screen lg:z-0 z-40 overflow-auto lg:relative fixed"
+        class="flex-sidebar lg:flex-auto w-sidebar lg:block hidden bg-white dark:bg-gray-800 border-r-2 dark:border-gray-700 h-screen lg:z-0 z-40 overflow-auto lg:relative fixed"
       >
         <Sidebar />
       </div>
