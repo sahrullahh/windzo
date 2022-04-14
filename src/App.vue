@@ -1,14 +1,12 @@
 <template>
   <!-- App -->
   <div class="flex bg-packed font-lexend dark:bg-gray-900">
-    <transition name="fade">
-      <div
-        id="sidebar-scroll"
-        class="flex-sidebar lg:flex-auto w-sidebar lg:block hidden bg-white dark:bg-gray-800 border-r-2 dark:border-gray-700 h-screen lg:z-0 z-40 overflow-auto lg:relative fixed"
-      >
-        <Sidebar />
-      </div>
-    </transition>
+    <div
+      id="sidebar-scroll"
+      class="flex-sidebar lg:flex-auto w-sidebar lg:block hidden bg-white dark:bg-gray-800 border-r-2 dark:border-gray-700 h-screen lg:z-0 z-40 overflow-auto lg:relative fixed"
+    >
+      <Sidebar />
+    </div>
     <div class="flex-auto w-full overflow-auto h-screen" id="body-scroll">
       <Header />
       <router-view />
@@ -25,9 +23,10 @@
   import Footer from "@/components/Footer";
   // npm-js
   import Scrollbar from "smooth-scrollbar";
-  import PerfectScrollbar from "perfect-scrollbar";
+
   export default {
     name: "App",
+
     components: {
       Header,
       Footer,

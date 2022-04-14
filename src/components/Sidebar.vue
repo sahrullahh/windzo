@@ -110,22 +110,17 @@
               <button
                 class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                Navs
+                Nav
               </button>
               <button
                 class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                Pagenation
+                Pagination
               </button>
               <button
                 class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Progress
-              </button>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Tooltip
               </button>
             </template>
           </menu-accordion>

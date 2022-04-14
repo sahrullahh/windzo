@@ -79,9 +79,9 @@
         <button class="mr-5 text-2xl text-gray-500">
           <Icon icon="clarity:notification-line" />
         </button>
-        <button @click="menuToggle" @blur="menuToggle">
+        <button @click="menuToggle" @blur="menuToggleBlur">
           <div
-            class="user-avatar flex hover:bg-gray-100 p-1 cursor-pointer rounded-md"
+            class="user-avatar flex hover:bg-gray-100 dark:hover:bg-gray-700 p-1 cursor-pointer rounded-md"
           >
             <img
               src="../assets/img/user.jpg"
@@ -98,14 +98,14 @@
           <div
             id="dropdownSmall"
             v-show="menu"
-            class="block absolute right-10 mt-12 z-10 w-44 border bg-white rounded divide-y divide-gray-100 shadow"
+            class="block absolute right-10 mt-12 z-10 w-44 border dark:border-gray-700 bg-white dark:bg-gray-800 rounded divide-y dark:divide-gray-700 divide-gray-100 shadow"
           >
-            <div class="py-3 px-4 text-sm text-gray-900">
+            <div class="py-3 px-4 text-sm text-gray-900 dark:text-gray-200">
               <div>Logged As</div>
               <div class="font-medium truncate">Moh Sahrullah</div>
             </div>
             <ul
-              class="py-1 text-sm text-gray-700"
+              class="py-1 text-sm text-gray-700 dark:text-gray-200"
               aria-labelledby="dropdownSmallButton"
             >
               <li>
@@ -131,7 +131,9 @@
               </li>
             </ul>
             <div class="py-1">
-              <a href="#" class="block py-2 px-4 text-sm text-gray-700"
+              <a
+                href="#"
+                class="block py-2 px-4 text-sm text-gray-700 dark:text-gray-200 hover:bg-primary hover:text-white"
                 >log out</a
               >
             </div>
@@ -156,6 +158,9 @@
     methods: {
       menuToggle: function () {
         this.menu = !this.menu;
+      },
+      menuToggleBlur: function () {
+        this.menu = false;
       },
       sidebarToggle: function () {
         document.querySelector(".flex-sidebar").classList.remove("hidden");
