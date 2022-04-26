@@ -7,6 +7,8 @@ import Valert from "../views/components/alert.vue";
 import Vaccrodion from "../views/components/accordion.vue";
 import Vbadges from "../views/components/badges.vue";
 import Vbreadcumb from "../views/components/breadcumbs.vue";
+import Vbutton from "../views/components/button.vue";
+import Vcard from "../views/components/card.vue";
 var appname = " - Windzo Dashboard Admin Template";
 
 const routes = [
@@ -51,6 +53,18 @@ const routes = [
     name: "Vbreadcumb",
     component: Vbreadcumb,
     meta: { title: "Breadcumb" + appname },
+  },
+  {
+    path: "/component/button",
+    name: "Vbutton",
+    component: Vbutton,
+    meta: { title: "Button" + appname },
+  },
+  {
+    path: "/component/card",
+    name: "Vcard",
+    component: Vcard,
+    meta: { title: "Card" + appname },
   },
 ];
 

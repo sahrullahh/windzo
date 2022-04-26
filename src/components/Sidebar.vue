@@ -77,16 +77,18 @@
               >
                 Breadcumb
               </router-link>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              <router-link
+                to="/component/button"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Button
-              </button>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              </router-link>
+              <router-link
+                to="/component/card"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Card
-              </button>
+              </router-link>
               <button
                 class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >

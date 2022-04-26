@@ -1,11 +1,16 @@
 {
   "name": "windzo",
   "version": "1.0.0",
+  "description": "Free Open Source Template Dashboard Admin Vue Tailwind CSS",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "windsass": "sass --watch src/assets/sass/app.windzo.scss src/assets/sass/css/windzo.css",
+    "require": "npm i -g sass @vue/cli"
   },
+  "author": "Mohammad Sahrullah",
+  "license": "MIT",
   "dependencies": {
     "apexcharts": "^3.34.0",
     "autoprefixer": "^10",
