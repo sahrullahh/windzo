@@ -5,7 +5,9 @@ this repo and contribute</p>
 <div align="center">
 <img src="https://img.shields.io/github/repo-size/sahrullahh/windzo" />
 <img src="https://img.shields.io/github/license/sahrullahh/windzo" />
+<a href="https://www.npmjs.com/package/windzo">
 <img src="https://img.shields.io/npm/v/windzo">
+</a>
 </div>
 
 <p align="center">Windzo is a free open source dashboard admin template, using vue js and tailwind css framework, make your app build easily and fast.</p>
