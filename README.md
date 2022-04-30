@@ -1,11 +1,11 @@
 <h1 align="center">Windzo Dashboard Admin</h1>
 <p align="center">this dashboard app on development fork 
-this repo for new commit update 😁</p>
+this repo and contribute</p>
 
 <div align="center">
 <img src="https://img.shields.io/github/repo-size/sahrullahh/windzo" />
 <img src="https://img.shields.io/github/license/sahrullahh/windzo" />
-<img src="https://img.shields.io/npm/v/vue">
+<img src="https://img.shields.io/npm/v/windzo">
 </div>
 
 <p align="center">Windzo is a free open source dashboard admin template, using vue js and tailwind css framework, make your app build easily and fast.</p>
