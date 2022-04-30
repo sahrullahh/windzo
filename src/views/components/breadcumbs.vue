@@ -1,5 +1,7 @@
 <template>
-  <div class="Badge h-auto p-3">
+  <!-- Search component Breadcumb with name of type  press Ctrl + F -->
+
+  <div class="beadcumb h-auto p-3">
     <nav class="flex" aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
@@ -76,7 +78,9 @@
     </div>
     <div class="grid grid-cols-2 mt-10 gap-5">
       <div class="card w-full p-5 rounded-md bg-white dark:bg-gray-800">
-        <h2 class="text-lg font-lexend">Default Breadcumb</h2>
+        <h2 class="text-lg font-lexend dark:text-gray-200">
+          Default Breadcumb
+        </h2>
         <div class="wrapper-breadcumb mt-5">
           <!-- default breadcumb -->
           <nav class="flex" aria-label="Breadcrumb">
@@ -147,9 +151,9 @@
       <div
         class="card row-span-2 w-full p-5 rounded-md bg-white dark:bg-gray-800"
       >
-        <h2 class="text-lg font-lexend">Solid Breadcumb</h2>
+        <!-- Solid Breadcrumb -->
+        <h2 class="text-lg font-lexend dark:text-gray-200">Solid Breadcumb</h2>
         <div class="wrapper-breadcumb mt-5">
-          <!-- Solid Breadcrumb -->
           <nav
             class="flex py-3 px-5 text-gray-700 bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700"
             aria-label="Breadcrumb"

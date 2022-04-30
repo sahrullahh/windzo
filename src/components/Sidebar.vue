@@ -92,7 +92,7 @@
               <button
                 class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                Owl Carousel
+                Swiper Carousel
               </button>
               <button
                 class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -153,14 +153,7 @@
             <Icon icon="ant-design:form-outlined" />
           </template>
           <template v-slot:title> Form Element </template>
-          <template v-slot:content>
-            <p>
-              <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit.
-              Quia, porro. Non a excepturi, voluptatibus ipsam magnam, eligendi,
-              accusantium ipsa quae quis praesentium voluptate saepe ullam sint
-              ea itaque consectetur impedit?
-            </p>
-          </template>
+          <template v-slot:content> </template>
         </menu-accordion>
       </div>
 
@@ -170,14 +163,7 @@
             <Icon icon="mdi:form-textbox" />
           </template>
           <template v-slot:title> Form Editor </template>
-          <template v-slot:content>
-            <p>
-              <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit.
-              Quia, porro. Non a excepturi, voluptatibus ipsam magnam, eligendi,
-              accusantium ipsa quae quis praesentium voluptate saepe ullam sint
-              ea itaque consectetur impedit?
-            </p>
-          </template>
+          <template v-slot:content> </template>
         </menu-accordion>
       </div>
       <div class="item mt-3">

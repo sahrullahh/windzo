@@ -1,4 +1,6 @@
 <template>
+  <!-- Search component Badge with name of type, press Ctrl + F -->
+
   <div class="Badge h-auto p-3">
     <nav class="flex" aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
@@ -74,7 +76,7 @@
         cart notifications and other.
       </p>
     </div>
-
+    <!-- Badge count notification -->
     <div class="grid grid-cols-2 gap-2 mt-3">
       <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
         <h2 class="dark:text-gray-200">Badge count notification</h2>
