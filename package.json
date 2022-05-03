@@ -10,8 +10,8 @@
     "require": "npm i -g sass @vue/cli"
   },
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/sahrullahh/windzo.git"
+    "type": "git",
+    "url": "git+https://github.com/sahrullahh/windzo.git"
   },
   "homepage": "https://windzo.vercel.app",
   "author": "Mohammad Sahrullah",
@@ -27,6 +27,7 @@
     "postcss": "^8",
     "smooth-scrollbar": "^8.7.4",
     "tailwindcss": "^3",
+    "v-tables-3": "^0.4.7",
     "vue": "^3.2.13",
     "vue-chartjs": "^4.0.2",
     "vue-perfect-scrollbar": "^0.2.1",
