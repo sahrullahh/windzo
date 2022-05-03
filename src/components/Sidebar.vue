@@ -92,11 +92,6 @@
               <button
                 class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                Swiper Carousel
-              </button>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
                 Dropdown
               </button>
               <button

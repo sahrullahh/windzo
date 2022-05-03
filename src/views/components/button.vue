@@ -193,7 +193,7 @@
 
       <!-- gradient button -->
 
-      <!-- button gradient monechrome -->
+      <!-- button gradient monochrome -->
       <div
         class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow bpx"
       >

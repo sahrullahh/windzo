@@ -134,7 +134,7 @@
               <a
                 href="#"
                 class="block py-2 px-4 text-sm text-gray-700 dark:text-gray-200 hover:bg-primary hover:text-white"
-                >log out</a
+                >Sign out</a
               >
             </div>
           </div>
