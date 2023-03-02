@@ -106,3 +106,9 @@ Windzo is created by <a href="https://github.com/sahrullahh">Mohammad Sahrullah.
 ## License
 
 [MIT](https://github.com/sahrullahh/windzo/blob/master/LICENSE)
+
+## Support Me
+
+support or not it doesn't matter, if you want to help to buy energy for me, I'm very grateful. I will be more diligent in developing this dashboard.
+
+<a href='https://ko-fi.com/I2I1BJP7L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>

@@ -1,8 +1,11 @@
 <template>
   <!-- Search component Badge with name of type, press Ctrl + F -->
 
-  <div class="Badge h-auto p-3">
-    <nav class="flex" aria-label="Breadcrumb">
+  <div class="Badge lg:h-screen h-auto p-3">
+    <nav
+      class="flex"
+      aria-label="Breadcrumb"
+    >
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
           <a
@@ -78,7 +81,9 @@
     </div>
     <!-- Badge count notification -->
     <div class="grid grid-cols-2 gap-2 mt-3">
-      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+      <div
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
+      >
         <h2 class="dark:text-gray-200">Badge count notification</h2>
         <div class="wrapper-badge w-full box-border flex gap-4 mt-4">
           <span class="bg-blue-700 rounded-full py-1 px-3 text-white">57</span>
@@ -104,7 +109,9 @@
           >
         </div>
       </div>
-      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+      <div
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
+      >
         <h2 class="dark:text-gray-200">Badge labeled</h2>
         <div class="wrapper-badge w-full box-border flex gap-4 mt-4">
           <span class="bg-blue-700 rounded-md py-1 px-4 text-white"
@@ -131,7 +138,9 @@
           >
         </div>
       </div>
-      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+      <div
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
+      >
         <h2 class="dark:text-gray-200">Badge Light count notification</h2>
         <div class="wrapper-badge w-full box-border flex gap-4 mt-4">
           <span class="bg-blue-200 rounded-full py-1 px-2 text-blue-700"
@@ -164,7 +173,9 @@
           >
         </div>
       </div>
-      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+      <div
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
+      >
         <h2 class="dark:text-gray-200">Badge Light labeled</h2>
         <div class="wrapper-badge w-full box-border flex gap-4 mt-4">
           <span class="bg-blue-200 rounded-md py-1 px-4 text-blue-700"

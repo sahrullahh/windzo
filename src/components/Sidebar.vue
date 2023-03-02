@@ -3,9 +3,12 @@
   <nav class="sidebar bg-white dark:bg-gray-800">
     <!-- sidebar head -->
     <div class="sidebar-head p-4">
-      <router-link to="/" exact>
+      <router-link
+        to="/"
+        exact
+      >
         <h2
-          class="text-2xl font-normal text-gray-800 dark:text-gray-500"
+          class="text-2xl font-normal text-gray-800 dark:text-gray-200"
           translate="no"
         >
           Windzo<span class="text-primary">.</span>
@@ -15,7 +18,10 @@
           >
         </h2>
       </router-link>
-      <button class="lg:hidden block float-right -mt-7" @click="sidebarToggle">
+      <button
+        class="lg:hidden block float-right -mt-7"
+        @click="sidebarToggle"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
@@ -34,7 +40,7 @@
     </div>
     <!-- sidebar list -->
     <div class="sidebar-list p-4 mt-4">
-      <p class="font-medium text-gray-400 dark:text-gray-600">Menu</p>
+      <p class="font-medium text-gray-400 dark:text-gray-400">Menu</p>
       <div class="wrap-item mt-4 dark:text-gray-500">
         <div class="item">
           <router-link
@@ -89,11 +95,12 @@
               >
                 Card
               </router-link>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              <router-link
+                to="/component/dropdown"
+                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Dropdown
-              </button>
+              </router-link>
               <button
                 class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
@@ -138,7 +145,7 @@
           </menu-accordion>
         </div>
       </div>
-      <p class="font-medium text-gray-400 mt-4 dark:text-gray-600">
+      <p class="font-medium text-gray-400 mt-4 dark:text-gray-400">
         UI Form & Tables
       </p>
 

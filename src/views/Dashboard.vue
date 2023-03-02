@@ -1,6 +1,9 @@
 <template>
   <div class="dashboard p-4">
-    <nav class="flex" aria-label="Breadcrumb">
+    <nav
+      class="flex"
+      aria-label="Breadcrumb"
+    >
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
           <a
@@ -34,7 +37,7 @@
     >
       <!-- card  -->
       <div
-        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow flex"
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700 flex"
       >
         <div class="p-2 max-w-sm">
           <div
@@ -61,14 +64,14 @@
 
         <div class="block p-2 w-full">
           <p class="font-semibold text-gray-900 dark:text-gray-200 text-xl">
-            Rp.2 300 908
+            Rp.23.423.009
           </p>
           <h2 class="font-normal text-gray-400 text-md mt-1">Total Payouts</h2>
         </div>
       </div>
       <!-- end card -->
       <div
-        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow flex"
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700 flex"
       >
         <div class="p-2 max-w-sm">
           <div
@@ -102,7 +105,7 @@
       </div>
       <!-- end card -->
       <div
-        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow flex"
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700 flex"
       >
         <div class="p-2 max-w-sm">
           <div
@@ -142,7 +145,7 @@
       </div>
       <!-- end card -->
       <div
-        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow flex"
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700 flex"
       >
         <div class="p-2 max-w-sm">
           <div
@@ -171,7 +174,7 @@
 
         <div class="block p-2 w-full">
           <p class="font-semibold text-gray-900 dark:text-gray-200 text-xl">
-            7 230
+            7230
           </p>
           <h2 class="font-normal text-gray-400 text-md mt-1">Total Visit</h2>
         </div>
@@ -179,33 +182,44 @@
       <!-- end card -->
     </div>
     <!-- end wrapper card -->
-    <div class="mt-2 lg:flex block lg:gap-2">
+    <div class="mt-2 lg:flex block lg:gap-2 relative">
       <div
-        class="bg-white dark:bg-gray-800 p-5 w-full rounded-md box-border shadow"
+        class="bg-white dark:bg-gray-800 p-0 w-full rounded-md box-border border dark:border-gray-700"
       >
-        <h2 class="font-bold text-lg text-gray-800 dark:text-gray-200">
-          Total Sales
-        </h2>
-        <p class="text-gray-400 font-lexend font-normal">
-          your sales chart per-years
-        </p>
-        <span class="float-right mr-20">
-          <h2 class="text-red-500 -mt-12 flex">
-            <span class="mr-2"> 15.9% </span
-            ><span>
-              <Icon icon="akar-icons:arrow-down" />
+        <div class="p-5 flex justify-between">
+          <div>
+            <h2 class="font-medium text-sm text-gray-800 dark:text-gray-200">
+              SALES
+            </h2>
+            <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200">
+              72%
+            </h1>
+
+            <p class="text-gray-400 font-lexend font-normal">
+              your sales chart per-years
+            </p>
+          </div>
+
+          <div class="flex gap-5">
+            <span class="">
+              <h2 class="text-red-500 flex">
+                <span class="mr-2"> 15.9% </span
+                ><span>
+                  <Icon icon="akar-icons:arrow-down" />
+                </span>
+              </h2>
             </span>
-          </h2>
-        </span>
-        <span class="float-right">
-          <h2 class="text-green-500 -mt-12 flex">
-            <span class="mr-2"> 87.9% </span
-            ><span>
-              <Icon icon="akar-icons:arrow-up" />
+            <span class="">
+              <h2 class="text-green-500 flex">
+                <span class="mr-2"> 87.9% </span
+                ><span>
+                  <Icon icon="akar-icons:arrow-up" />
+                </span>
+              </h2>
             </span>
-          </h2>
-        </span>
-        <br />
+          </div>
+        </div>
+
         <apexchart
           width="100%"
           height="380"
@@ -218,23 +232,21 @@
         ></apexchart>
         <br />
         <hr />
-        <div class="wrapper-button mt-3">
+        <div class="wrapper-button p-5 flex justify-between mt-3">
           <select
             name=""
             id=""
-            class="dark:bg-gray-800 dark:hover:bg-gray-700 border-gray-200 dark:border-gray-300 border max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
+            class="dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 border max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
           >
             <option value="">Last 7 years</option>
           </select>
-          <button
-            class="uppercase float-right -mt-7 border-b border-red-600 text-red-600"
-          >
+          <button class="uppercase border-b border-red-600 text-red-600">
             Sales Report
           </button>
         </div>
       </div>
       <div
-        class="bg-white dark:bg-gray-800 p-5 lg:w-96 lg:mt-0 mt-4 shadow rounded-md w-full"
+        class="bg-white dark:bg-gray-800 p-5 lg:w-96 lg:mt-0 mt-4 border dark:border-gray-700 rounded-md w-full"
       >
         <h2 class="dark:text-gray-200 text-xl font-bold">Partner Store</h2>
         <p class="text-gray-400">This is list if your partner online.</p>
@@ -327,23 +339,25 @@
     </div>
     <div class="mt-2 lg:flex block lg:gap-2">
       <div
-        class="mt-2 bg-white dark:bg-gray-800 p-5 w-full rounded-md box-border shadow"
+        class="mt-2 bg-white dark:bg-gray-800 p-0 w-full rounded-md box-border border dark:border-gray-700"
       >
-        <h2 class="font-bold text-lg text-gray-800 dark:text-gray-200">
-          1,780
-        </h2>
-        <p class="text-gray-400 font-lexend font-normal">
-          New products this week
-        </p>
-        <span class="float-right">
-          <h2 class="text-green-500 -mt-12 flex">
-            <span class="mr-2"> 27.9% </span
-            ><span>
-              <Icon icon="akar-icons:arrow-up" />
-            </span>
+        <div class="head p-5">
+          <h2 class="font-bold text-lg text-gray-800 dark:text-gray-200">
+            1,780
           </h2>
-        </span>
-        <div class="wrapper-chart mt-5">
+          <p class="text-gray-400 font-lexend font-normal">
+            New products this week
+          </p>
+          <span class="float-right">
+            <h2 class="text-green-500 -mt-12 flex">
+              <span class="mr-2"> 27.9% </span
+              ><span>
+                <Icon icon="akar-icons:arrow-up" />
+              </span>
+            </h2>
+          </span>
+        </div>
+        <div class="wrapper-chart mt-5 pr-2 pl-2">
           <apexchart
             width="100%"
             height="380"
@@ -353,37 +367,40 @@
           ></apexchart>
           <br />
           <hr />
-          <div class="wrapper-button mt-3">
-            <select
-              name=""
-              id=""
-              class="dark:bg-gray-800 dark:hover:bg-gray-700 border-gray-200 dark:border-gray-300 border max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
-            >
-              <option value="">Last 7 days</option>
-            </select>
-            <button
-              class="uppercase float-right -mt-7 border-b border-red-600 text-red-600"
-            >
-              Product Report
-            </button>
+          <div class="footer p-5">
+            <div class="wrapper-button flex justify-between mt-3">
+              <select
+                name=""
+                id=""
+                class="dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 border max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
+              >
+                <option value="">Last 7 days</option>
+              </select>
+              <button class="uppercase border-b border-red-600 text-red-600">
+                Product Report
+              </button>
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="mt-2 bg-white dark:bg-gray-800 p-5 w-full rounded-md box-border shadow"
+        class="mt-2 bg-white dark:bg-gray-800 p-0 w-full rounded-md box-border border dark:border-gray-700"
       >
-        <h2 class="font-bold text-lg text-gray-800 dark:text-gray-200">
-          5,355
-        </h2>
-        <p class="text-gray-400 font-lexend font-normal">Visitor this week</p>
-        <span class="float-right">
-          <h2 class="text-green-500 -mt-12 flex">
-            <span class="mr-2"> 47.9% </span
-            ><span>
-              <Icon icon="akar-icons:arrow-up" />
-            </span>
+        <div class="head p-5">
+          <h2 class="font-bold text-lg text-gray-800 dark:text-gray-200">
+            5,355
           </h2>
-        </span>
+          <p class="text-gray-400 font-lexend font-normal">Visitor this week</p>
+
+          <span class="float-right">
+            <h2 class="text-green-500 -mt-12 flex">
+              <span class="mr-2"> 47.9% </span
+              ><span>
+                <Icon icon="akar-icons:arrow-up" />
+              </span>
+            </h2>
+          </span>
+        </div>
         <div class="wrapper-chart mt-5">
           <apexchart
             width="100%"
@@ -394,29 +411,33 @@
           ></apexchart>
           <br />
           <hr />
-          <div class="wrapper-button mt-3">
-            <select
-              name=""
-              id=""
-              class="dark:bg-gray-800 dark:hover:bg-gray-700 border-gray-200 dark:border-gray-300 border max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
-            >
-              <option value="">Last 7 days</option>
-            </select>
-            <button
-              class="uppercase float-right -mt-7 border-b border-red-600 text-red-600"
-            >
-              Vistor Report
-            </button>
+          <div class="footer p-5">
+            <div class="wrapper-button flex justify-between mt-3">
+              <select
+                name=""
+                id=""
+                class="dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 border max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
+              >
+                <option value="">Last 7 days</option>
+              </select>
+              <button class="uppercase border-b border-red-600 text-red-600">
+                Vistor Report
+              </button>
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="mt-2 bg-white dark:bg-gray-800 p-5 w-full rounded-md box-border shadow"
+        class="mt-2 bg-white dark:bg-gray-800 p-0 w-full rounded-md box-border border dark:border-gray-700"
       >
-        <h2 class="font-bold text-lg text-gray-800 dark:text-gray-200">475</h2>
-        <p class="text-gray-400 font-lexend font-normal">
-          User signups this week
-        </p>
+        <div class="head p-5">
+          <h2 class="font-bold text-lg text-gray-800 dark:text-gray-200">
+            475
+          </h2>
+          <p class="text-gray-400 font-lexend font-normal">
+            User signups this week
+          </p>
+        </div>
 
         <div class="wrapper-chart mt-5">
           <apexchart
@@ -429,26 +450,26 @@
           <div class="p-3"></div>
           <br />
           <hr />
-          <div class="wrapper-button mt-3">
-            <select
-              name=""
-              id=""
-              class="dark:bg-gray-800 dark:hover:bg-gray-700 border-gray-200 dark:border-gray-300 border max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
-            >
-              <option value="">Last 7 years</option>
-            </select>
+          <div class="footer p-5">
+            <div class="wrapper-button flex justify-between mt-3">
+              <select
+                name=""
+                id=""
+                class="dark:bg-gray-800 dark:hover:bg-gray-700 border dark:border-gray-700 max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
+              >
+                <option value="">Last 7 years</option>
+              </select>
 
-            <button
-              class="uppercase float-right -mt-7 border-b border-red-600 text-red-600"
-            >
-              User Report
-            </button>
+              <button class="uppercase border-b border-red-600 text-red-600">
+                User Report
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="mt-2 bg-white dark:bg-gray-800 p-5 w-full rounded-md box-border shadow"
+      class="mt-2 bg-white dark:bg-gray-800 p-5 w-full rounded-md box-border border dark:border-gray-700"
     >
       <h2 class="font-bold text-lg text-gray-800 dark:text-gray-200">
         Latest Transactions
@@ -464,10 +485,30 @@
             class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
           >
             <tr>
-              <th scope="col" class="uppercase px-6 py-3">Transaction</th>
-              <th scope="col" class="uppercase px-6 py-3">Date & Time</th>
-              <th scope="col" class="uppercase px-6 py-3">Amount</th>
-              <th scope="col" class="uppercase px-6 py-3">Status</th>
+              <th
+                scope="col"
+                class="uppercase px-6 py-3"
+              >
+                Transaction
+              </th>
+              <th
+                scope="col"
+                class="uppercase px-6 py-3"
+              >
+                Date & Time
+              </th>
+              <th
+                scope="col"
+                class="uppercase px-6 py-3"
+              >
+                Amount
+              </th>
+              <th
+                scope="col"
+                class="uppercase px-6 py-3"
+              >
+                Status
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -509,17 +550,15 @@
           </tbody>
         </table>
       </div>
-      <div class="wrapper-button mt-3">
+      <div class="wrapper-button flex justify-between mt-3">
         <select
           name=""
           id=""
-          class="dark:bg-gray-800 dark:hover:bg-gray-700 border-gray-200 dark:border-gray-300 border max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
+          class="dark:bg-gray-800 dark:hover:bg-gray-700 border dark:border-gray-700 max-w-lg px-4 py-3 block rounded-md text-gray-500 dark:text-gray-400"
         >
           <option value="">Last 7 years</option>
         </select>
-        <button
-          class="uppercase float-right -mt-7 border-b border-red-600 text-red-600"
-        >
+        <button class="uppercase border-b border-red-600 text-red-600">
           Transaction Report
         </button>
       </div>
@@ -547,7 +586,17 @@
           stroke: {
             curve: "straight",
           },
-
+          chart: {
+            toolbar: {
+              show: true,
+            },
+            zoom: {
+              enabled: false,
+            },
+            sparkline: {
+              enabled: true,
+            },
+          },
           markers: {
             size: 0,
           },
@@ -557,9 +606,9 @@
           fill: {
             type: "gradient",
             gradient: {
-              shadeIntensity: 1,
-              opacityFrom: 0.7,
-              opacityTo: 0.9,
+              shadeIntensity: 0,
+              opacityFrom: 0.2,
+              opacityTo: 0.5,
               stops: [0, 90, 100],
             },
           },
@@ -647,9 +696,9 @@
           fill: {
             type: "gradient",
             gradient: {
-              shadeIntensity: 1,
-              opacityFrom: 0.7,
-              opacityTo: 0.9,
+              shadeIntensity: 0,
+              opacityFrom: 0,
+              opacityTo: 0.3,
               stops: [0, 90, 100],
             },
           },
@@ -678,19 +727,19 @@
         seriesDonut: [20, 15, 63, 83],
         tableTransaction: [
           {
-            transaction: "Payment from Ike yolanda",
+            transaction: "Payment from Ethan Roger",
             datetime: "Apr 22, 2022",
             amount: "Rp.450.000",
             statusTransaction: "completed",
           },
           {
-            transaction: "Payment from Ice Wulandari",
+            transaction: "Payment from Taylor neal",
             datetime: "May 2, 2022",
             amount: "Rp.250.000",
             statusTransaction: "completed",
           },
           {
-            transaction: "Payment from Alfiah Gipta Jannatil Hasanah",
+            transaction: "Payment from Tobi Ferreira",
             datetime: "May 5, 2022",
             amount: "Rp.150.000",
             statusTransaction: "progress",

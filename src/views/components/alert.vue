@@ -2,7 +2,10 @@
   <!-- Search component Alert with name of type,  press Ctrl + F -->
 
   <div class="alert h-auto p-3">
-    <nav class="flex" aria-label="Breadcrumb">
+    <nav
+      class="flex"
+      aria-label="Breadcrumb"
+    >
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
           <a
@@ -79,7 +82,9 @@
     <!-- grid wrapper card -->
     <div class="grid lg:grid-cols-2 grid-col-1 gap-4 mt-5">
       <!-- default alert  -->
-      <div class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow">
+      <div
+        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
+      >
         <h2 class="dark:text-gray-200">Default</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
           <div
@@ -126,7 +131,7 @@
       </div>
       <!-- heading alert  -->
       <div
-        class="card row-span-2 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+        class="card row-span-2 bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
         <h2 class="dark:text-gray-200">Heading</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
@@ -182,7 +187,7 @@
       </div>
       <!-- With icon alert -->
       <div
-        class="card row-span-3 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+        class="card row-span-3 bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
         <h2 class="dark:text-gray-200">With icon alert</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
@@ -254,7 +259,7 @@
       </div>
       <!-- Dismis alert  -->
       <div
-        class="card row-span-4 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+        class="card row-span-4 bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
         <h2 class="dark:text-gray-200">Dismissable Alert</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
@@ -326,7 +331,7 @@
       </div>
       <!-- Light alert  -->
       <div
-        class="card row-span-4 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+        class="card row-span-4 bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
         <h2 class="dark:text-gray-200">Light alert</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">

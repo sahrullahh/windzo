@@ -1,8 +1,11 @@
 <template>
   <!-- Search component card with name of type, press Ctrl + F -->
 
-  <div class="card-page h-auto p-3">
-    <nav class="flex" aria-label="Breadcrumb">
+  <div class="card-page lg:h-screen h-auto p-3">
+    <nav
+      class="flex"
+      aria-label="Breadcrumb"
+    >
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
           <a
@@ -81,7 +84,7 @@
         <h2 class="dark:text-gray-200">Card Default</h2>
         <div class="wrapper-button w-full box-border mt-4">
           <div
-            class="card p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+            class="card p-6 max-w-sm bg-white rounded-lg border border-gray-200 border dark:border-gray-700-md dark:bg-gray-800 dark:border-gray-700"
           >
             <a href="#">
               <h5
@@ -119,7 +122,7 @@
         <h2 class="dark:text-gray-200">Card With Image</h2>
         <div class="wrapper-button w-full box-border mt-4">
           <div
-            class="card max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+            class="card max-w-sm bg-white rounded-lg border border-gray-200 border dark:border-gray-700-md dark:bg-gray-800 dark:border-gray-700"
           >
             <a href="#">
               <img

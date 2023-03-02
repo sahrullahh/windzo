@@ -2,7 +2,10 @@
   <!-- Search component Accordion with name of type,  press Ctrl + F -->
 
   <div class="accordion h-auto p-3">
-    <nav class="flex" aria-label="Breadcrumb">
+    <nav
+      class="flex"
+      aria-label="Breadcrumb"
+    >
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
           <a
@@ -80,7 +83,7 @@
     <div class="grid lg:grid-cols-1 grid-col-1 gap-4 mt-5">
       <!-- default alert  -->
       <div
-        class="card col-span-1 grid grid-cols-1 gap-5 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+        class="card col-span-1 grid grid-cols-1 gap-5 bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
         <div class="accordion-packed">
           <h2 class="font-semibold dark:text-gray-200">Accordion Default</h2>
@@ -134,7 +137,7 @@
         </div>
       </div>
       <div
-        class="card row-span-1 grid grid-cols-1 gap-5 bg-white dark:bg-gray-800 w-full rounded-md p-5 shadow"
+        class="card row-span-1 grid grid-cols-1 gap-5 bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
         <div class="accordion-packed">
           <h2 class="font-semibold dark:text-gray-200">Accordion Menu Only</h2>
