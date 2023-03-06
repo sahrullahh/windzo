@@ -28,7 +28,10 @@
     </span>
   </button>
 
-  <div v-show="isOpen" :id="`collapse${_uid}`">
+  <div
+    v-show="isOpen"
+    :id="`collapse${_uid}`"
+  >
     <slot name="content" />
   </div>
 </template>

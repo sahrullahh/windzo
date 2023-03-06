@@ -166,7 +166,7 @@
             Hello iam alert dark
           </div>
           <div
-            class="secondary-alert bg-gray-300 py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            class="secondary-alert bg-gray-300 py-3 px-5 text-gray-800 dark:text-gray-400 w-full box-border rounded-md"
           >
             <h1 class="text-xl font-bold">Windzo</h1>
             Hello iam alert secondary
@@ -232,7 +232,7 @@
             <span> Hello iam alert dark </span>
           </div>
           <div
-            class="secondary-alert bg-gray-300 dark:bg-gray-800 flex py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            class="secondary-alert bg-gray-300 flex py-3 px-5 text-gray-800 w-full box-border rounded-md"
           >
             <span class="text-2xl mr-3">
               <Icon icon="bx:cog" />

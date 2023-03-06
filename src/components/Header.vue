@@ -40,13 +40,35 @@
         </div>
       </div>
       <div class="mr-5 flex">
-        <button class="mr-5 text-2xl text-gray-500">
+        <!-- btn dark mode -->
+
+        <button
+          @click="setTheme(true)"
+          class="mr-5 text-2xl text-gray-500"
+          v-if="!darkMode"
+        >
+          <Icon icon="ph:sun-dim" />
+        </button>
+        <button
+          @click="setTheme(false)"
+          v-else
+          class="mr-5 text-2xl text-gray-500"
+        >
+          <Icon icon="ri:moon-fill" />
+        </button>
+        <!-- btn notification -->
+        <button class="mr-5 text-2xl text-gray-500 relative">
+          <i
+            class="bg-red-500 rounded-full p-1.5 border border-white dark:border-gray-700 -mt-1 absolute"
+          ></i>
           <Icon icon="clarity:notification-line" />
         </button>
-        <button @click="menuToggle">
-          <div
-            class="user-avatar flex hover:bg-gray-100 dark:hover:bg-gray-700 p-1 cursor-pointer rounded-md"
-          >
+
+        <button
+          @blur="menuToggleBlur"
+          @click="menuToggle"
+        >
+          <div class="user-avatar flex p-1 cursor-pointer rounded-md">
             <img
               src="../assets/img/user.jpg"
               class="rounded-full mr-4 w-10 h-10 p-1 ring-1 ring-gray-300 dark:ring-gray-500"
@@ -57,11 +79,7 @@
             /></span>
           </div>
         </button>
-        <div
-          v-if="menu"
-          class="inset-0 z-40 w-full h-full fixed top-0"
-          @click="menuToggleBlur"
-        ></div>
+
         <transition name="fade">
           <div
             id="dropdownSmall"
@@ -99,76 +117,7 @@
                 >
               </li>
             </ul>
-            <div class="text-gray-700 dark:text-gray-200">
-              <a
-                class="py-2 px-3 hover:bg-primary hover:text-white gap-2 justify-between flex outline-none text-sm p-2.5"
-              >
-                <div class="p-1">
-                  <span class="mt-2"> Theme </span>
-                </div>
 
-                <div
-                  class="dropdown-theme mr-2 flex rounded border hover:text-gray-700 dark:hover:text-white dark:border-gray-700 relative bg-white dark:bg-gray-800"
-                >
-                  <span class="mt-1.5 ml-2">
-                    <svg
-                      v-if="themeSelected == 'dark'"
-                      class="w-4 absolute text-gray-700 dark:text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                      ></path>
-                    </svg>
-                    <svg
-                      v-else
-                      class="w-4 absolute text-gray-700 dark:text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                  <select
-                    name=""
-                    class="rounded border appearance-none outline-none accent-primary border-none p-1 px-6 text-gray-900 bg-white dark:bg-gray-800 dark:text-gray-200"
-                    v-model="themeSelected"
-                    @change="setTheme"
-                    id=""
-                  >
-                    <option value="dark">Dark</option>
-                    <option value="light">Light</option>
-                  </select>
-                  <span class="absolute right-0">
-                    <svg
-                      class="mt-2 mr-2"
-                      data-testid="geist-icon"
-                      fill="none"
-                      height="10"
-                      shape-rendering="geometricPrecision"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      width="10"
-                      style="color: currentcolor"
-                    >
-                      <path
-                        d="M17 8.517L12 3 7 8.517M7 15.48l5 5.517 5-5.517"
-                      ></path>
-                    </svg>
-                  </span>
-                </div>
-              </a>
-            </div>
             <div class="py-1">
               <a
                 href="#"
@@ -190,7 +139,7 @@
     data() {
       return {
         menu: false,
-        themeSelected: "",
+        darkMode: false,
       };
     },
     components: {
@@ -213,9 +162,10 @@
       sidebarToggle: function () {
         document.querySelector(".flex-sidebar").classList.remove("hidden");
       },
+      loadTheme() {
+        this.darkMode =
+          localStorage.getItem("color-theme") == "dark" ? true : false;
 
-      setTheme() {
-        localStorage.setItem("color-theme", this.themeSelected);
         if (localStorage.getItem("color-theme")) {
           if (localStorage.getItem("color-theme") === "dark") {
             document.documentElement.classList.add("dark");
@@ -235,27 +185,30 @@
           }
         }
       },
+      setTheme(bool) {
+        this.darkMode = bool;
+        if (localStorage.getItem("color-theme")) {
+          if (this.darkMode) {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("color-theme", "dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("color-theme", "light");
+          }
+          // if NOT set via local storage previously
+        } else {
+          if (document.documentElement.classList.contains("light")) {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("color-theme", "light");
+          } else {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("color-theme", "dark");
+          }
+        }
+      },
     },
     mounted() {
-      this.themeSelected = localStorage.getItem("color-theme");
-      if (localStorage.getItem("color-theme")) {
-        if (localStorage.getItem("color-theme") === "dark") {
-          document.documentElement.classList.add("dark");
-          localStorage.setItem("color-theme", "dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-          localStorage.setItem("color-theme", "light");
-        }
-        // if NOT set via local storage previously
-      } else {
-        if (document.documentElement.classList.contains("light")) {
-          document.documentElement.classList.remove("dark");
-          localStorage.setItem("color-theme", "light");
-        } else {
-          document.documentElement.classList.add("dark");
-          localStorage.setItem("color-theme", "dark");
-        }
-      }
+      this.loadTheme();
     },
   };
 </script>

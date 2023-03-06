@@ -1,36 +1,13 @@
 <template>
   <div class="dashboard p-4">
-    <nav
-      class="flex"
-      aria-label="Breadcrumb"
-    >
-      <ol class="inline-flex items-center space-x-1 md:space-x-3">
-        <li class="inline-flex items-center">
-          <a
-            href="#"
-            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-          >
-            <svg
-              class="mr-2 w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-              ></path>
-            </svg>
-            Dashboard
-          </a>
-        </li>
-      </ol>
-    </nav>
     <!-- end nav -->
-    <div class="mt-5 w-full">
+    <div class="mt-2 w-full">
+      <p class="uppercase text-xs text-gray-700 font-semibold">overview</p>
       <h1 class="text-2xl text-gray-900 dark:text-gray-200 font-medium">
         Dashboard
       </h1>
     </div>
+
     <!-- grid wrapper card -->
     <div
       class="wrapper-card grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-2 mt-5"
@@ -184,7 +161,7 @@
     <!-- end wrapper card -->
     <div class="mt-2 lg:flex block lg:gap-2 relative">
       <div
-        class="bg-white dark:bg-gray-800 p-0 w-full rounded-md box-border border dark:border-gray-700"
+        class="bg-white dark:bg-gray-800 p-0 lg:w-3/4 w-full rounded-md box-border border dark:border-gray-700"
       >
         <div class="p-5 flex justify-between">
           <div>
@@ -222,7 +199,7 @@
 
         <apexchart
           width="100%"
-          height="380"
+          height="260"
           type="area"
           :options="optionsArea"
           :series="seriesArea"
@@ -246,95 +223,91 @@
         </div>
       </div>
       <div
-        class="bg-white dark:bg-gray-800 p-5 lg:w-96 lg:mt-0 mt-4 border dark:border-gray-700 rounded-md w-full"
+        class="bg-white dark:bg-gray-800 p-5 lg:mt-0 mt-4 lg:w-2/4 border dark:border-gray-700 rounded-md w-full"
       >
-        <h2 class="dark:text-gray-200 text-xl font-bold">Partner Store</h2>
-        <p class="text-gray-400">This is list if your partner online.</p>
-        <p class="font-medium font-lg mt-5 dark:text-gray-200">Online</p>
-        <div class="mt-4 grid grid-cols-1 gap-4">
-          <button class="w-full box-border flex gap-4">
-            <span>
-              <img
-                src="../assets/img/user1.png"
-                alt=""
-                width="50"
-                height="50"
-                class="rounded-full"
-              />
-            </span>
-            <span class="text-left">
-              <h1 class="font-bold text-xl dark:text-gray-200">
-                Elizabeth Begum
-              </h1>
-              <p class="text-gray-400 dark:text-gray-200">online</p>
-            </span>
-          </button>
-          <button class="w-full box-border flex gap-4">
-            <span>
-              <img
-                src="../assets/img/user2.png"
-                alt=""
-                width="50"
-                height="50"
-                class="rounded-full"
-              />
-            </span>
-            <span class="text-left">
-              <h1 class="font-bold text-xl dark:text-gray-200">Ethan Roger</h1>
-              <p class="text-gray-400 dark:text-gray-200">online</p>
-            </span>
-          </button>
+        <div class="">
+          <h2 class="text-lg font-semibold dark:text-gray-200">
+            PARTNER SALES
+          </h2>
+          <p class="text-gray-400">This is list if your partner online.</p>
         </div>
-        <div class="mt-4 grid grid-cols-1 gap-4">
-          <button class="w-full box-border flex gap-4">
-            <span>
-              <img
-                src="../assets/img/user3.png"
-                alt=""
-                width="50"
-                height="50"
-                class="rounded-full"
-              />
-            </span>
-            <span class="text-left">
-              <h1 class="font-bold text-xl dark:text-gray-200">
-                Tobi Ferreira
-              </h1>
-              <p class="text-gray-400 dark:text-gray-200">online</p>
-            </span>
-          </button>
-          <p class="font-medium font-lg mt-5 dark:text-gray-200">Offline</p>
-          <button class="w-full box-border flex gap-4">
-            <span>
-              <img
-                src="../assets/img/user4.png"
-                alt=""
-                width="50"
-                height="50"
-                class="rounded-full"
-              />
-            </span>
-            <span class="text-left">
-              <h1 class="font-bold text-xl dark:text-gray-200">Taylor Neal</h1>
-              <p class="text-gray-400 dark:text-gray-200">2 Hours ago</p>
-            </span>
-          </button>
-          <button class="w-full box-border flex gap-4">
-            <span>
-              <img
-                src="../assets/img/user5.png"
-                alt=""
-                width="50"
-                height="50"
-                class="rounded-full"
-              />
-            </span>
-            <span class="text-left">
-              <h1 class="font-bold text-xl dark:text-gray-200">Bruno Barron</h1>
-              <p class="text-gray-400 dark:text-gray-200">4 Hours ago</p>
-            </span>
-          </button>
-        </div>
+        <perfect-scrollbar class="divide-y h-96 mt-5 dark:divide-gray-700">
+          <div class="p-3 w-full">
+            <div class="flex gap-5">
+              <div>
+                <img
+                  class="w-14 rounded-md"
+                  src="../assets/img/user1.png"
+                  alt=""
+                />
+              </div>
+              <div class="mt-1">
+                <h2 class="dark:text-gray-200">Elizabeth Begum</h2>
+                <p class="text-sm text-gray-300">Active now</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 w-full">
+            <div class="flex gap-5">
+              <div>
+                <img
+                  class="w-14 rounded-md"
+                  src="../assets/img/user2.png"
+                  alt=""
+                />
+              </div>
+              <div class="mt-1">
+                <h2 class="dark:text-gray-200">Ethan Roger</h2>
+                <p class="text-sm text-gray-300">Active now</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 w-full">
+            <div class="flex gap-5">
+              <div>
+                <img
+                  class="w-14 rounded-md"
+                  src="../assets/img/user3.png"
+                  alt=""
+                />
+              </div>
+              <div class="mt-1">
+                <h2 class="dark:text-gray-200">Tobi Ferreira</h2>
+                <p class="text-sm text-gray-300">last online 2 hours ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 w-full">
+            <div class="flex gap-5">
+              <div>
+                <img
+                  class="w-14 rounded-md"
+                  src="../assets/img/user4.png"
+                  alt=""
+                />
+              </div>
+              <div class="mt-1">
+                <h2 class="dark:text-gray-200">Taylor neal</h2>
+                <p class="text-sm text-gray-300">last online 2 minutes ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 w-full">
+            <div class="flex gap-5">
+              <div>
+                <img
+                  class="w-14 rounded-md"
+                  src="../assets/img/user5.png"
+                  alt=""
+                />
+              </div>
+              <div class="mt-1">
+                <h2 class="dark:text-gray-200">Bruno Barron</h2>
+                <p class="text-sm text-gray-300">last online 2 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </perfect-scrollbar>
       </div>
     </div>
     <div class="mt-2 lg:flex block lg:gap-2">

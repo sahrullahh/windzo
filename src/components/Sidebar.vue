@@ -160,32 +160,12 @@
       </div>
 
       <div class="item mt-3">
-        <menu-accordion>
-          <template v-slot:icon>
-            <Icon icon="mdi:form-textbox" />
-          </template>
-          <template v-slot:title> Form Editor </template>
-          <template v-slot:content> </template>
-        </menu-accordion>
-      </div>
-      <div class="item mt-3">
         <router-link to="/">
           <button
             class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
           >
             <span class="mr-3 text-xl"><Icon icon="bi:table" /></span>
-            <span class="w-full"> Table </span>
-            <span class="box-border mt-1 text-gray-500"> </span>
-          </button>
-        </router-link>
-      </div>
-      <div class="item mt-3">
-        <router-link to="/">
-          <button
-            class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
-          >
-            <span class="mr-3 text-xl"><Icon icon="carbon:data-table" /></span>
-            <span class="w-full"> DataTables </span>
+            <span class="w-full"> Tables </span>
             <span class="box-border mt-1 text-gray-500"> </span>
           </button>
         </router-link>
@@ -193,10 +173,7 @@
     </div>
   </nav>
 </template>
-<style>
-  .active {
-  }
-</style>
+
 <script>
   import { Icon } from "@iconify/vue";
   import MenuAccordion from "./MenuAccordion.vue";
