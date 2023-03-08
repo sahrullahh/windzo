@@ -136,11 +136,31 @@
             </template>
             <template v-slot:title> Layouts </template>
             <template v-slot:content>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Coming Soon
-              </button>
+              <div class="mt-2">
+                <menu-accordion>
+                  <template v-slot:title> Error Page </template>
+                  <template v-slot:content>
+                    <router-link
+                      to="/404page"
+                      class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      404 page
+                    </router-link>
+                    <router-link
+                      to="/500"
+                      class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      500 page
+                    </router-link>
+                    <router-link
+                      to="/maintenance"
+                      class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      Maintenance page
+                    </router-link>
+                  </template>
+                </menu-accordion>
+              </div>
             </template>
           </menu-accordion>
         </div>

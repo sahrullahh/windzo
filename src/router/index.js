@@ -11,7 +11,10 @@ import Vbutton from "../views/components/button.vue";
 import Vcard from "../views/components/card.vue";
 import Vdropdown from "../views/components/dropdown.vue";
 import Login from "../views/layouts/Login.vue";
-
+// error page
+import Page404 from "../views/layouts/error/404.vue";
+import Page500 from "../views/layouts/error/500.vue";
+import PageMaintenance from "../views/layouts/error/maintenance.vue";
 var appname = " - Windzo Dashboard Admin Template";
 
 const routes = [
@@ -72,6 +75,29 @@ const routes = [
     name: "Login",
     component: Login,
     meta: { title: "Login" + appname, hideNav: true },
+  },
+  // layout/error
+  // default page 404
+  {
+    path: "/:pathMatch(.*)*",
+    name: "Page404",
+    component: Page404,
+    meta: { title: "Upps! 404" + appname, hideNav: true },
+  },
+  {
+    path: "/500",
+    name: "Page500",
+    component: Page500,
+    meta: { title: "Server internal Error" + appname, hideNav: true },
+  },
+  {
+    path: "/maintenance",
+    name: "maintenanc",
+    component: PageMaintenance,
+    meta: {
+      title: "Sorry the app has been Maintenance" + appname,
+      hideNav: true,
+    },
   },
 ];
 

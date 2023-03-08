@@ -1,7 +1,7 @@
 <template>
   <!-- this header -->
   <header class="bg-white dark:bg-gray-800 p-2 border-b-2 dark:border-gray-700">
-    <div class="wrap-header flex items-center justify-between flex-wrap">
+    <div class="wrap-header flex items-center gap-5 justify-between flex-wrap">
       <div class="flex flex-no-shrink items-center">
         <button
           class="text-gray-500 lg:hidden ml-3 block"
@@ -27,7 +27,7 @@
           </svg>
         </button>
         <div
-          class="input-box border dark:bg-gray-900 dark:border-gray-700 rounded-md mr-5 hidden lg:w-search w-full box-border lg:flex md:flex focus-within:bg-gray-100 dark:focus-within:bg-gray-700"
+          class="input-box border dark:bg-gray-900 lg:ml-0 ml-5 dark:border-gray-700 rounded-md hidden lg:w-search w-full box-border lg:flex md:flex focus-within:bg-gray-100 dark:focus-within:bg-gray-700"
         >
           <span class="text-3xl p-2 text-gray-400"
             ><Icon icon="ei:search"
@@ -39,8 +39,21 @@
           />
         </div>
       </div>
-      <div class="mr-5 flex">
+
+      <div class="mr-5 flex gap-3">
         <!-- btn dark mode -->
+
+        <button
+          @click="fullscreenToggle"
+          class="mr-5 text-2xl text-gray-500 relative"
+        >
+          <i v-if="!fullscreenMode">
+            <Icon icon="ic:outline-fullscreen" />
+          </i>
+          <i v-else>
+            <Icon icon="ic:outline-fullscreen-exit" />
+          </i>
+        </button>
 
         <button
           @click="setTheme(true)"
@@ -69,14 +82,22 @@
           @click="menuToggle"
         >
           <div class="user-avatar flex p-1 cursor-pointer rounded-md">
-            <img
-              src="../assets/img/user.jpg"
-              class="rounded-full mr-4 w-10 h-10 p-1 ring-1 ring-gray-300 dark:ring-gray-500"
-              alt=""
-            />
-            <span class="text-md mt-4 text-gray-300"
+            <div>
+              <img
+                src="../assets/img/user.jpg"
+                class="rounded-full mr-4 w-10 h-10 p-1 ring-1 ring-gray-300 dark:ring-gray-500"
+                alt=""
+              />
+            </div>
+            <div class="text-left">
+              <h2 class="dark:text-white text-gray-800">Hi, Moh Sahrullah.</h2>
+              <p class="text-xs text-gray-400 dark:text-gray-500">
+                Administrator Windzo
+              </p>
+            </div>
+            <!-- <span class="text-md mt-4 text-gray-300"
               ><Icon icon="bi:caret-down-fill"
-            /></span>
+            /></span> -->
           </div>
         </button>
 
@@ -134,12 +155,13 @@
 <style></style>
 <script>
   import { Icon } from "@iconify/vue";
-
+  import { fullscreen } from "../helper/fullscreen.js";
   export default {
     data() {
       return {
         menu: false,
         darkMode: false,
+        fullscreenMode: false,
       };
     },
     components: {
@@ -151,6 +173,7 @@
       },
     },
     methods: {
+      fullscreen,
       menuToggle: function () {
         this.menu = !this.menu;
       },
@@ -158,6 +181,10 @@
         if (!this.$refs.menu) {
           this.menu = false;
         }
+      },
+      fullscreenToggle() {
+        this.fullscreenMode = !this.fullscreenMode;
+        this.fullscreen(this.fullscreenMode);
       },
       sidebarToggle: function () {
         document.querySelector(".flex-sidebar").classList.remove("hidden");

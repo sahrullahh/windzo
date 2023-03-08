@@ -2,10 +2,29 @@
   <div class="dashboard p-4">
     <!-- end nav -->
     <div class="mt-2 w-full">
-      <p class="uppercase text-xs text-gray-700 font-semibold">overview</p>
-      <h1 class="text-2xl text-gray-900 dark:text-gray-200 font-medium">
-        Dashboard
-      </h1>
+      <div
+        class="lg:flex grid-cols-1 lg:space-y-0 space-y-3 gap-5 justify-between"
+      >
+        <div>
+          <p class="uppercase text-xs text-gray-700 font-semibold">overview</p>
+          <h1 class="text-2xl text-gray-900 dark:text-gray-200 font-medium">
+            Dashboard
+          </h1>
+        </div>
+        <div class="flex gap-2">
+          <button
+            class="bg-white dark:bg-gray-800 hover:border-gray-200 dark:hover:bg-gray-700 dark:text-white dark:border-gray-700 border rounded py-2 px-5"
+          >
+            New view
+          </button>
+          <button
+            class="bg-primary border flex gap-2 text-white hover:bg-primary/80 dark:border-gray-700 rounded py-3 px-5"
+          >
+            <span class="icon text-2xl"><Icon icon="ic:twotone-plus" /></span>
+            <span class="text"> Create New Report</span>
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- grid wrapper card -->
@@ -243,7 +262,9 @@
               </div>
               <div class="mt-1">
                 <h2 class="dark:text-gray-200">Elizabeth Begum</h2>
-                <p class="text-sm text-gray-300">Active now</p>
+                <p class="text-sm dark:text-gray-500 text-gray-400">
+                  Active now
+                </p>
               </div>
             </div>
           </div>
@@ -258,7 +279,9 @@
               </div>
               <div class="mt-1">
                 <h2 class="dark:text-gray-200">Ethan Roger</h2>
-                <p class="text-sm text-gray-300">Active now</p>
+                <p class="text-sm dark:text-gray-500 text-gray-400">
+                  Active now
+                </p>
               </div>
             </div>
           </div>
@@ -273,7 +296,9 @@
               </div>
               <div class="mt-1">
                 <h2 class="dark:text-gray-200">Tobi Ferreira</h2>
-                <p class="text-sm text-gray-300">last online 2 hours ago</p>
+                <p class="text-sm dark:text-gray-500 text-gray-400">
+                  last online 2 hours ago
+                </p>
               </div>
             </div>
           </div>
@@ -288,7 +313,9 @@
               </div>
               <div class="mt-1">
                 <h2 class="dark:text-gray-200">Taylor neal</h2>
-                <p class="text-sm text-gray-300">last online 2 minutes ago</p>
+                <p class="text-sm dark:text-gray-500 text-gray-400">
+                  last online 2 minutes ago
+                </p>
               </div>
             </div>
           </div>
@@ -303,7 +330,9 @@
               </div>
               <div class="mt-1">
                 <h2 class="dark:text-gray-200">Bruno Barron</h2>
-                <p class="text-sm text-gray-300">last online 2 hours ago</p>
+                <p class="text-sm dark:text-gray-500 text-gray-400">
+                  last online 2 hours ago
+                </p>
               </div>
             </div>
           </div>

@@ -25,6 +25,7 @@
     "flowbite": "^1.4.1",
     "lodash": "^4.17.21",
     "perfect-scrollbar": "^1.5.5",
+    "pinia": "^2.0.33",
     "postcss": "^8",
     "smooth-scrollbar": "^8.7.4",
     "tailwindcss": "^3",

@@ -11,7 +11,7 @@
     </div>
 
     <div
-      class="flex-auto w-full overflow-auto h-screen"
+      class="flex-auto w-full overflow-auto h-screen transition-colors"
       id="body-scroll"
     >
       <Header v-if="!$route.meta.hideNav" />
@@ -19,11 +19,12 @@
       <Footer v-if="!$route.meta.hideNav" />
     </div>
   </div>
-  <!-- end app -->
+  <!-- End app -->
 </template>
 
 <script>
-  // vue Components
+  import { useFullscreenMode } from "@/store/fullscreen";
+  // Vue components
   import Sidebar from "@/components/Sidebar";
   import Header from "@/components/Header";
   import Footer from "@/components/Footer";
@@ -38,6 +39,7 @@
       Footer,
       Sidebar,
     },
+
     mounted() {
       Scrollbar.init(document.querySelector("#body-scroll"));
 
