@@ -236,6 +236,13 @@
     },
     mounted() {
       this.loadTheme();
+      document.onfullscreenchange = (event) => {
+        if (document.fullscreenElement) {
+          this.fullscreenMode = true;
+        } else {
+          this.fullscreenMode = false;
+        }
+      };
     },
   };
 </script>

@@ -42,7 +42,6 @@
 
     mounted() {
       Scrollbar.init(document.querySelector("#body-scroll"));
-
       setTimeout(() => {
         var alert_dis = document.querySelectorAll(".alert-dismiss");
         alert_dis.forEach((x) =>

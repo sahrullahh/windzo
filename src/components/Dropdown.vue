@@ -2,7 +2,7 @@
   <div class="relative">
     <button
       class="z-10 relative flex items-center focus:outline-none select-none"
-      @click="open = !open"
+      @click="open = true"
     >
       <slot name="button"></slot>
     </button>
@@ -16,21 +16,29 @@
     ></button>
 
     <!--dropdown menu-->
-    <div v-if="placement == 'right'">
+    <div
+      v-if="placement == 'right'"
+      @click="open = false"
+    >
       <transition name="fade">
         <div
+          @blur="close"
           class="absolute right-0 shadow-lg rounded-md border dark:border-gray-600 w-48 text-sm mt-2 bg-white dark:bg-gray-800 dark:text-white z-50"
-          v-if="open"
+          v-show="open"
         >
           <slot name="content"></slot>
         </div>
       </transition>
     </div>
-    <div v-else>
+    <div
+      v-else
+      @click="open = false"
+    >
       <transition name="fade">
         <div
+          @blur="close"
           class="absolute left-0 shadow-lg rounded-md border dark:border-gray-600 w-48 text-sm mt-2 bg-white dark:bg-gray-800 dark:text-white z-50"
-          v-if="open"
+          v-show="open"
         >
           <slot name="content"></slot>
         </div>
@@ -48,6 +56,12 @@
     },
     props: {
       placement: String,
+      dropdown: Boolean,
+    },
+    methods: {
+      toggle() {
+        this.open = !this.open;
+      },
     },
     mounted() {},
   };

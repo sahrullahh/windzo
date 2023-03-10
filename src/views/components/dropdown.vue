@@ -315,5 +315,10 @@
       Dropdown,
       Icon,
     },
+    methods: {
+      alert() {
+        alert("Hello");
+      },
+    },
   };
 </script>
