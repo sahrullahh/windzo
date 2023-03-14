@@ -29,6 +29,7 @@
   </button>
 
   <div
+    class="dark:bg-gray-900 bg-gray-100 rounded-md mt-2 p-2"
     v-show="isOpen"
     :id="`collapse${_uid}`"
   >

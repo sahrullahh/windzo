@@ -90,7 +90,7 @@
           <div
             id="notificaitons"
             v-show="notification"
-            class="block absolute right-56 mt-12 z-50 w-96 border dark:border-gray-700 bg-white dark:bg-gray-800 rounded divide-y dark:divide-gray-700 divide-gray-100 shadow"
+            class="block absolute lg:right-56 right-28 mt-12 z-50 w-96 border dark:border-gray-700 bg-white dark:bg-gray-800 rounded divide-y dark:divide-gray-700 divide-gray-100 shadow"
           >
             <!-- head notification -->
             <div
@@ -267,6 +267,7 @@
       fullscreen,
       setDarkMode,
       loadDarkMode,
+
       menuToggle: function () {
         this.menu = !this.menu;
       },
@@ -293,6 +294,7 @@
         this.darkMode = bool;
         this.setDarkMode(bool);
       },
+
       imageAssets(url) {
         return require("@/assets/img/" + url);
       },

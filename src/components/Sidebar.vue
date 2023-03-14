@@ -6,18 +6,25 @@
       <router-link
         to="/"
         exact
+        class="flex"
       >
+        <img
+          class="w-8 mt-1"
+          src="@/assets/logo/logo.svg"
+          alt="logo windzo"
+        />
         <h2
-          class="text-2xl font-normal text-gray-800 dark:text-gray-200"
+          class="text-2xl font-normal ml-3 mt-2 text-gray-800 dark:text-gray-200"
           translate="no"
         >
           Windzo<span class="text-primary">.</span>
-          <span
-            class="bg-gray-700 absolute mt-2 dark:block hidden rounded-md py-1 px-2 text-xs text-gray-200"
-            >Dark mode</span
-          >
         </h2>
       </router-link>
+      <div
+        class="bg-gray-700 absolute mt-3 dark:block hidden rounded-md py-1 px-2 text-xs text-gray-200"
+      >
+        Dark mode
+      </div>
       <button
         class="lg:hidden block dark:text-gray-400 float-right -mt-7"
         @click="$emit('sidebarToggle')"
@@ -39,131 +46,135 @@
       </button>
     </div>
     <!-- sidebar list -->
-    <div class="sidebar-list p-4 mt-4">
-      <p class="font-medium text-gray-400 dark:text-gray-400">Menu</p>
-      <div class="wrap-item mt-4 dark:text-gray-500">
-        <div class="item">
-          <router-link
-            to="/"
-            exact
-            class="w-full flex text-left rounded-md box-border p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-          >
-            <span class="mr-3 text-xl"><Icon icon="bxs:dashboard" /></span>
-            <span class="w-full"> Dashboard </span>
+    <div class="sidebar-list p-4 mt-4 divide-y dark:divide-gray-700">
+      <div class="pb-5">
+        <p class="font-medium text-gray-400 dark:text-gray-400">Menu</p>
+        <div class="wrap-item mt-4 dark:text-gray-500">
+          <div class="item">
+            <router-link
+              to="/"
+              exact
+              class="w-full flex text-left rounded-md box-border p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <span class="mr-3 text-xl"><Icon icon="bxs:dashboard" /></span>
+              <span class="w-full"> Dashboard </span>
+            </router-link>
+          </div>
+          <div class="item mt-3">
+            <menu-accordion>
+              <template v-slot:icon>
+                <Icon icon="gg:components" />
+              </template>
+              <template v-slot:title> Components </template>
+              <template v-slot:content>
+                <router-link
+                  to="/component/alert"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Alert
+                </router-link>
+                <router-link
+                  to="/component/accordion"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Accordion
+                </router-link>
+                <router-link
+                  to="/component/badge"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Badge
+                </router-link>
+                <router-link
+                  to="/component/breadcumb"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Breadcumb
+                </router-link>
+                <router-link
+                  to="/component/button"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Button
+                </router-link>
+                <router-link
+                  to="/component/card"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Card
+                </router-link>
+                <router-link
+                  to="/component/dropdown"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  Dropdown
+                </router-link>
+              </template>
+            </menu-accordion>
+          </div>
+          <div class="item mt-3">
+            <menu-accordion>
+              <template v-slot:icon>
+                <Icon icon="bi:layout-wtf" />
+              </template>
+              <template v-slot:title> Layouts </template>
+              <template v-slot:content>
+                <div class="">
+                  <menu-accordion>
+                    <template v-slot:title> Error Page </template>
+                    <template v-slot:content>
+                      <router-link
+                        to="/404page"
+                        class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        404 page
+                      </router-link>
+                      <router-link
+                        to="/500"
+                        class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        500 page
+                      </router-link>
+                      <router-link
+                        to="/maintenance"
+                        class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        Maintenance page
+                      </router-link>
+                    </template>
+                  </menu-accordion>
+                </div>
+              </template>
+            </menu-accordion>
+          </div>
+        </div>
+      </div>
+      <div class="pb-5">
+        <p class="font-medium text-gray-400 mt-4 dark:text-gray-400">
+          UI Form & Tables
+        </p>
+
+        <div class="item mt-3">
+          <menu-accordion>
+            <template v-slot:icon>
+              <Icon icon="ant-design:form-outlined" />
+            </template>
+            <template v-slot:title> Form Element </template>
+            <template v-slot:content> </template>
+          </menu-accordion>
+        </div>
+
+        <div class="item mt-3">
+          <router-link to="/">
+            <button
+              class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
+            >
+              <span class="mr-3 text-xl"><Icon icon="bi:table" /></span>
+              <span class="w-full"> Tables </span>
+              <span class="box-border mt-1 text-gray-500"> </span>
+            </button>
           </router-link>
         </div>
-        <div class="item mt-3">
-          <menu-accordion>
-            <template v-slot:icon>
-              <Icon icon="gg:components" />
-            </template>
-            <template v-slot:title> Components </template>
-            <template v-slot:content>
-              <router-link
-                to="/component/alert"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Alert
-              </router-link>
-              <router-link
-                to="/component/accordion"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Accordion
-              </router-link>
-              <router-link
-                to="/component/badge"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Badge
-              </router-link>
-              <router-link
-                to="/component/breadcumb"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Breadcumb
-              </router-link>
-              <router-link
-                to="/component/button"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Button
-              </router-link>
-              <router-link
-                to="/component/card"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Card
-              </router-link>
-              <router-link
-                to="/component/dropdown"
-                class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Dropdown
-              </router-link>
-            </template>
-          </menu-accordion>
-        </div>
-        <div class="item mt-3">
-          <menu-accordion>
-            <template v-slot:icon>
-              <Icon icon="bi:layout-wtf" />
-            </template>
-            <template v-slot:title> Layouts </template>
-            <template v-slot:content>
-              <div class="mt-2">
-                <menu-accordion>
-                  <template v-slot:title> Error Page </template>
-                  <template v-slot:content>
-                    <router-link
-                      to="/404page"
-                      class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-                    >
-                      404 page
-                    </router-link>
-                    <router-link
-                      to="/500"
-                      class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-                    >
-                      500 page
-                    </router-link>
-                    <router-link
-                      to="/maintenance"
-                      class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-                    >
-                      Maintenance page
-                    </router-link>
-                  </template>
-                </menu-accordion>
-              </div>
-            </template>
-          </menu-accordion>
-        </div>
-      </div>
-      <p class="font-medium text-gray-400 mt-4 dark:text-gray-400">
-        UI Form & Tables
-      </p>
-
-      <div class="item mt-3">
-        <menu-accordion>
-          <template v-slot:icon>
-            <Icon icon="ant-design:form-outlined" />
-          </template>
-          <template v-slot:title> Form Element </template>
-          <template v-slot:content> </template>
-        </menu-accordion>
-      </div>
-
-      <div class="item mt-3">
-        <router-link to="/">
-          <button
-            class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
-          >
-            <span class="mr-3 text-xl"><Icon icon="bi:table" /></span>
-            <span class="w-full"> Tables </span>
-            <span class="box-border mt-1 text-gray-500"> </span>
-          </button>
-        </router-link>
       </div>
     </div>
   </nav>

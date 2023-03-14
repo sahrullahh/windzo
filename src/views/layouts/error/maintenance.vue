@@ -15,7 +15,7 @@
       </p>
       <div class="flex gap-5 justify-center">
         <button
-          class="bg-white border dark:bg-gray-800 dark:border-gray-700 rounded text-white py-3 px-5"
+          class="bg-white border dark:bg-gray-800 dark:border-gray-700 rounded dark:text-white py-3 px-5"
         >
           Notify me, if ready to use
         </button>

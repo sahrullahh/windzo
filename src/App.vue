@@ -3,15 +3,19 @@
   <div class="flex bg-gray-50 font-lexend dark:bg-gray-900">
     <div
       v-if="!$route.meta.hideNav"
-      :class="!sidebar ? 'hidden' : ''"
-      class="lg:flex-auto w-sidebar lg:block bg-white dark:bg-gray-800 border-r-2 dark:border-gray-700 lg:z-0 z-20 overflow-auto lg:relative fixed"
+      class="lg:block"
+      :class="{ 'lg:block hidden': !sidebar, block: sidebar }"
     >
-      <perfect-scrollbar class="h-screen">
-        <Sidebar
-          v-if="!$route.meta.hideNav"
-          @sidebarToggle="close"
-        />
-      </perfect-scrollbar>
+      <div
+        class="lg:flex-auto w-sidebar bg-white dark:bg-gray-800 border-r-2 dark:border-gray-700 lg:z-0 z-20 overflow-auto lg:relative fixed"
+      >
+        <perfect-scrollbar class="h-screen">
+          <Sidebar
+            v-if="!$route.meta.hideNav"
+            @sidebarToggle="close"
+          />
+        </perfect-scrollbar>
+      </div>
     </div>
 
     <div
@@ -30,7 +34,8 @@
 </template>
 
 <script>
-  import { alertDismis } from "@/helper/alert-dismis.js";
+  import { alertDismis } from "@/helper/alert-dismis";
+
   // Vue components
   import Sidebar from "@/components/Sidebar";
   import Header from "@/components/Header";
@@ -43,7 +48,8 @@
 
     data() {
       return {
-        sidebar: true,
+        sidebarDark: false,
+        sidebar: false,
       };
     },
 
@@ -54,6 +60,7 @@
     },
     methods: {
       alertDismis,
+
       open() {
         this.sidebar = true;
       },
