@@ -12,15 +12,9 @@ this repo and contribute</p>
 
 <p align="center">Windzo is a free open source dashboard admin template, using vue js and tailwind css framework, make your app build easily and fast.</p>
 
-### Light mode
-
 <!-- <img src="./windzo-light-mode.png" /> -->
 
-![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/blob/master/windzo-light-mode.png)
-
-### Dark mode
-
-![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/blob/master/windzo-dark-mode.png)
+![Windzo UI Dashboard Mohammad Sahrullah](https://github.com/sahrullahh/windzo/blob/master/windzo.png)
 
 <!-- <img src="./windzo-dark-mode.png" /> -->
 
