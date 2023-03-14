@@ -4,7 +4,7 @@
     <div
       v-if="!$route.meta.hideNav"
       class="lg:block"
-      :class="{ 'lg:block hidden': !sidebar, block: sidebar }"
+      :class="{ 'lg:block hidden -left-60': !sidebar, block: sidebar }"
     >
       <div
         class="lg:flex-auto w-sidebar bg-white dark:bg-gray-800 border-r-2 dark:border-gray-700 lg:z-0 z-20 overflow-auto lg:relative fixed"
@@ -76,3 +76,19 @@
     },
   };
 </script>
+
+<style>
+  .slide-enter-active {
+    transition: all 0.3s ease-out;
+  }
+
+  .slide-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+
+  .slide-enter-from,
+  .slide-leave-to {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+</style>
