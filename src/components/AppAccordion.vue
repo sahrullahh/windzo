@@ -1,7 +1,7 @@
 <template>
   <button
     @click="toggleAccordion()"
-    class="text-gray-800 dark:text-gray-500 bg-transparent border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-200 w-full flex text-left rounded-md box-border p-3"
+    class="text-gray-800 dark:text-gray-500 transition-all bg-transparent border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-200 w-full flex text-left rounded-md box-border p-3"
     :aria-expanded="isOpen"
     :aria-controls="`collapse${_uid}`"
     :class="{
@@ -9,9 +9,11 @@
       'bg-transparent': !isOpen,
     }"
   >
+    <!-- icon accordion -->
     <span class="mr-3 text-xl">
       <slot name="icon"></slot>
     </span>
+    <!-- title accordion -->
     <span class="w-full">
       <slot name="title" />
     </span>
@@ -30,7 +32,7 @@
 
   <div
     v-show="isOpen"
-    :id="`collapse${_uid}`"
+    :id="uid"
     class="p-3 mt-2 bg-gray-100 dark:bg-gray-700"
   >
     <slot name="content" />
@@ -39,10 +41,14 @@
 
 <script>
   import { Icon } from "@iconify/vue";
+  let _uid = 0;
+
   export default {
     data() {
+      _uid += 1;
       return {
         isOpen: false,
+        uid: `collapse${_uid}`,
       };
     },
 

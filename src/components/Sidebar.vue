@@ -19,8 +19,8 @@
         </h2>
       </router-link>
       <button
-        class="lg:hidden block float-right -mt-7"
-        @click="sidebarToggle"
+        class="lg:hidden block dark:text-gray-400 float-right -mt-7"
+        @click="$emit('sidebarToggle')"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -101,31 +101,6 @@
               >
                 Dropdown
               </router-link>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                List Group
-              </button>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Modal
-              </button>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Nav
-              </button>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Pagination
-              </button>
-              <button
-                class="w-full text-left rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Progress
-              </button>
             </template>
           </menu-accordion>
         </div>
@@ -202,11 +177,5 @@
       Icon,
       MenuAccordion,
     },
-    methods: {
-      sidebarToggle: function () {
-        document.querySelector(".flex-sidebar").classList.add("hidden");
-      },
-    },
-    mounted() {},
   };
 </script>

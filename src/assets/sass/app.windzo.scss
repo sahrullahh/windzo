@@ -9,4 +9,18 @@
   }
 }
 
+body {
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: #4f46e5;
+  }
+
+  ::selection {
+    color: white;
+    background: #4f46e5;
+  }
+  // default user selection
+  user-select: none;
+}
 // apexcharts font family

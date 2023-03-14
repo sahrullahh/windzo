@@ -10,7 +10,7 @@ import Vbreadcumb from "../views/components/breadcumbs.vue";
 import Vbutton from "../views/components/button.vue";
 import Vcard from "../views/components/card.vue";
 import Vdropdown from "../views/components/dropdown.vue";
-import Login from "../views/layouts/Login.vue";
+import Login from "../views/layouts/auth/Login.vue";
 // error page
 import Page404 from "../views/layouts/error/404.vue";
 import Page500 from "../views/layouts/error/500.vue";
@@ -71,7 +71,7 @@ const routes = [
   },
   // layouts
   {
-    path: "/layouts/login",
+    path: "/auth/login",
     name: "Login",
     component: Login,
     meta: { title: "Login" + appname, hideNav: true },
