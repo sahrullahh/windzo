@@ -1,18 +1,21 @@
 <template>
   <div class="w-full h-screen">
-    <div class="flex shadow rounded-md h-screen">
-      <div class="bg-white dark:bg-gray-800 w-full">
-        <div class="form-head p-5">
-          <img
-            src="../../../assets/logo/logo.svg"
-            alt=""
-            class="w-10"
-          />
-        </div>
+    <div class="flex shadow bg-waves rounded-md h-screen">
+      <div class="bg-white dark:bg-gray-900 w-full">
         <form>
           <div
-            class="form-body max-w-xl mx-auto lg:p-20 p-8 lg:mt-20 mt-5 space-y-8"
+            class="form-body max-w-xl mx-auto lg:p-20 p-8 lg:mt-10 mt-5 space-y-8"
           >
+            <div
+              class="form-head cursor-pointer"
+              @click="$router.push('/')"
+            >
+              <img
+                src="../../../assets/logo/logo.svg"
+                alt=""
+                class="w-10"
+              />
+            </div>
             <div class="space-y-3">
               <h2 class="dark:text-white font-semibold text-gray-800 text-4xl">
                 Create new account?
@@ -137,7 +140,6 @@
           </div>
         </form>
       </div>
-      <!-- <div class="bg-gray-500 w-full"></div> -->
     </div>
   </div>
 </template>

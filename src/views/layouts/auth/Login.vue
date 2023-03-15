@@ -1,21 +1,24 @@
 <template>
   <div class="w-full h-screen">
     <div class="flex shadow rounded-md h-screen">
-      <div class="bg-white dark:bg-gray-800 w-full">
-        <div class="form-head p-5">
-          <img
-            src="../../../assets/logo/logo.svg"
-            alt=""
-            class="w-10"
-          />
-        </div>
+      <div class="bg-white dark:bg-gray-900 w-full">
         <form>
           <div
             class="form-body lg:max-w-xl mx-auto lg:p-20 p-8 lg:mt-20 mt-5 space-y-8"
           >
+            <div
+              class="form-head cursor-pointer"
+              @click="$router.push('/')"
+            >
+              <img
+                src="../../../assets/logo/logo.svg"
+                alt=""
+                class="w-10"
+              />
+            </div>
             <div class="space-y-3">
               <h2 class="dark:text-white font-semibold text-gray-800 text-4xl">
-                Welcome, to Windzo
+                Welcome, to Windzo<span class="text-primary">.</span>
               </h2>
               <p class="dark:text-gray-400 text-gray-700">
                 Please enter your account to continue.
@@ -88,7 +91,10 @@
                   >Remember for 30 days</label
                 >
               </div>
-              <button class="text-sm dark:text-white text-gray-700">
+              <button
+                @click="$router.push('/auth/forgot-password')"
+                class="text-sm dark:text-white hover:text-primary text-gray-700"
+              >
                 Forgot password?
               </button>
             </div>
@@ -104,13 +110,15 @@
                 @click="$router.push('/auth/register')"
                 class="ml-2 text-primary"
               >
-                Register here free
+                Register here
               </button>
             </p>
           </div>
         </form>
       </div>
-      <!-- <div class="bg-gray-500 w-full"></div> -->
+      <div
+        class="bg-wave dark:bg-gray-900 bg-white w-2/5 lg:block hidden"
+      ></div>
     </div>
   </div>
 </template>
@@ -118,3 +126,26 @@
 <script>
   export default {};
 </script>
+<style>
+  /* custom pattern https://superdesigner.co/tools/css-backgrounds */
+  .bg-wave {
+    background: radial-gradient(
+        circle at top left,
+        transparent 25%,
+        #4f46e5 25.5%,
+        #4f46e5 36%,
+        transparent 37%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        transparent 34%,
+        #4f46e5 34.5%,
+        #4f46e5 45.5%,
+        transparent 46%,
+        transparent 100%
+      );
+    background-size: 6em 6em;
+    opacity: 1;
+  }
+</style>
