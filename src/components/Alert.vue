@@ -8,10 +8,6 @@
       :id="_id"
       :aria-close="!close"
       :aria-controls="`${_id}`"
-      :class="
-        (border ? `border-2 border-${borderColor}` : 'border-none',
-        `bg-${background} text-${textColor} `)
-      "
       class="flex justify-between py-3 px-5 w-full box-border rounded-md"
     >
       <div class="flex">
@@ -55,7 +51,7 @@
     props: {
       background: {
         type: String,
-        default: "blue-500",
+        default: "",
       },
       demo: {
         type: Boolean,

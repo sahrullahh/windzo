@@ -11,6 +11,11 @@ import Vbutton from "../views/components/button.vue";
 import Vcard from "../views/components/card.vue";
 import Vdropdown from "../views/components/dropdown.vue";
 import Login from "../views/layouts/auth/Login.vue";
+import Register from "../views/layouts/auth/Register.vue";
+
+// layouts
+import Blank from "../views/layouts/Blank.vue";
+
 // error page
 import Page404 from "../views/layouts/error/404.vue";
 import Page500 from "../views/layouts/error/500.vue";
@@ -70,11 +75,25 @@ const routes = [
     meta: { title: "Dropdown" + appname },
   },
   // layouts
+
+  {
+    path: "/Blank",
+    name: "Blank Page",
+    component: Blank,
+    meta: { title: "Blank Page" + appname },
+  },
+
   {
     path: "/auth/login",
     name: "Login",
     component: Login,
     meta: { title: "Login" + appname, hideNav: true },
+  },
+  {
+    path: "/auth/register",
+    name: "Register",
+    component: Register,
+    meta: { title: "Register" + appname, hideNav: true },
   },
   // layout/error
   // default page 404

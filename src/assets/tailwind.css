@@ -4,7 +4,7 @@
 
 @tailwind utilities;
 
-@layer utilities {
+/* @layer utilities {
   @variants responsive {
     .masonry {
       column-gap: 1.5em;
@@ -22,7 +22,7 @@
       break-inside: avoid;
     }
   }
-}
+} */
 .open-accordion {
   transform: rotate(137deg);
 }

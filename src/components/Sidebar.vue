@@ -54,7 +54,7 @@
             <router-link
               to="/"
               exact
-              class="w-full flex text-left rounded-md box-border p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+              class="w-full flex text-left rounded-md box-border p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
             >
               <span class="mr-3 text-xl"><Icon icon="bxs:dashboard" /></span>
               <span class="w-full"> Dashboard </span>
@@ -69,43 +69,43 @@
               <template v-slot:content>
                 <router-link
                   to="/component/alert"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
                   Alert
                 </router-link>
                 <router-link
                   to="/component/accordion"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
                   Accordion
                 </router-link>
                 <router-link
                   to="/component/badge"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
                   Badge
                 </router-link>
                 <router-link
                   to="/component/breadcumb"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
                   Breadcumb
                 </router-link>
                 <router-link
                   to="/component/button"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
                   Button
                 </router-link>
                 <router-link
                   to="/component/card"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
                   Card
                 </router-link>
                 <router-link
                   to="/component/dropdown"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
                   Dropdown
                 </router-link>
@@ -120,26 +120,55 @@
               <template v-slot:title> Layouts </template>
               <template v-slot:content>
                 <div class="">
+                  <router-link
+                    to="/blank"
+                    class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                  >
+                    Blank Page
+                  </router-link>
                   <menu-accordion>
                     <template v-slot:title> Error Page </template>
                     <template v-slot:content>
                       <router-link
                         to="/404page"
-                        class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                       >
                         404 page
                       </router-link>
                       <router-link
                         to="/500"
-                        class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                       >
                         500 page
                       </router-link>
                       <router-link
                         to="/maintenance"
-                        class="w-full text-left block rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                       >
                         Maintenance page
+                      </router-link>
+                    </template>
+                  </menu-accordion>
+                  <menu-accordion>
+                    <template v-slot:title> Authentication Page</template>
+                    <template v-slot:content>
+                      <router-link
+                        to="/auth/login"
+                        class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      >
+                        Login Page
+                      </router-link>
+                      <router-link
+                        to="/auth/register"
+                        class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      >
+                        Register Page
+                      </router-link>
+                      <router-link
+                        to="/auth/forgot-pasword"
+                        class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      >
+                        Forgot Password Page
                       </router-link>
                     </template>
                   </menu-accordion>
@@ -167,7 +196,7 @@
         <div class="item mt-3">
           <router-link to="/">
             <button
-              class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
+              class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-200 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
             >
               <span class="mr-3 text-xl"><Icon icon="bi:table" /></span>
               <span class="w-full"> Tables </span>
