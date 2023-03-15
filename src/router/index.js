@@ -1,4 +1,20 @@
 import { createRouter, createWebHistory } from "vue-router";
+
+// Default Pages
+import Dashboard from "../views/Dashboard.vue";
+// Component Pages
+import Valert from "../views/components/alert.vue";
+import Vaccrodion from "../views/components/accordion.vue";
+import Vbadges from "../views/components/badges.vue";
+import Vbreadcumb from "../views/components/breadcumbs.vue";
+import Vbutton from "../views/components/button.vue";
+import Vcard from "../views/components/card.vue";
+import Vdropdown from "../views/components/dropdown.vue";
+import Login from "../views/layouts/auth/Login.vue";
+// error page
+import Page404 from "../views/layouts/error/404.vue";
+import Page500 from "../views/layouts/error/500.vue";
+import PageMaintenance from "../views/layouts/error/maintenance.vue";
 var appname = " - Windzo Dashboard Admin Template";
 
 const routes = [
@@ -6,7 +22,7 @@ const routes = [
   {
     path: "/",
     name: "Dashboard",
-    component: import("../views/Dashboard.vue"),
+    component: Dashboard,
     meta: { title: "Dashboard " + appname },
   },
 
@@ -14,50 +30,50 @@ const routes = [
   {
     path: "/component/alert",
     name: "Valert",
-    component: import("../views/components/alert.vue"),
+    component: Valert,
     meta: { title: "Alert" + appname },
   },
   {
     path: "/component/accordion",
     name: "Vaccordion",
-    component: import("../views/components/accordion.vue"),
+    component: Vaccrodion,
     meta: { title: "Accordion" + appname },
   },
   {
     path: "/component/badge",
     name: "Vbadge",
-    component: import("../views/components/badges.vue"),
+    component: Vbadges,
     meta: { title: "Badge" + appname },
   },
   {
     path: "/component/breadcumb",
     name: "Vbreadcumb",
-    component: import("../views/components/breadcumbs.vue"),
+    component: Vbreadcumb,
     meta: { title: "Breadcumb" + appname },
   },
   {
     path: "/component/button",
     name: "Vbutton",
-    component: import("../views/components/button.vue"),
+    component: Vbutton,
     meta: { title: "Button" + appname },
   },
   {
     path: "/component/card",
     name: "Vcard",
-    component: import("../views/components/card.vue"),
+    component: Vcard,
     meta: { title: "Card" + appname },
   },
   {
     path: "/component/dropdown",
     name: "Vdropdown",
-    component: import("../views/components/dropdown.vue"),
+    component: Vdropdown,
     meta: { title: "Dropdown" + appname },
   },
   // layouts
   {
     path: "/auth/login",
     name: "Login",
-    component: import("../views/layouts/auth/Login.vue"),
+    component: Login,
     meta: { title: "Login" + appname, hideNav: true },
   },
   // layout/error
@@ -65,19 +81,19 @@ const routes = [
   {
     path: "/:pathMatch(.*)*",
     name: "Page404",
-    component: import("../views/layouts/error/404.vue"),
+    component: Page404,
     meta: { title: "Upps! 404" + appname, hideNav: true },
   },
   {
     path: "/500",
     name: "Page500",
-    component: import("../views/layouts/error/500.vue"),
+    component: Page500,
     meta: { title: "Server internal Error" + appname, hideNav: true },
   },
   {
     path: "/maintenance",
     name: "maintenanc",
-    component: import("../views/layouts/error/maintenance.vue"),
+    component: PageMaintenance,
     meta: {
       title: "Sorry the app has been Maintenance" + appname,
       hideNav: true,
