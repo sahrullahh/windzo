@@ -55,6 +55,7 @@
     props: {
       background: {
         type: String,
+        default: "blue-500",
       },
       demo: {
         type: Boolean,

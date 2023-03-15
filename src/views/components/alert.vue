@@ -90,12 +90,6 @@
           <p class="dark:text-gray-200">
             you can change background colors by adding props and text in your
             alert components.
-            <br /><br />
-            <span> example : </span>
-            <br />
-            <span class="text-red-500 bg-gray-200">background="blue-800"</span>
-            <br />
-            <span class="text-red-500 bg-gray-200">textColor="blue-800"</span>
           </p>
         </div>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
@@ -507,10 +501,11 @@
 
 <script>
   import Alert from "@/components/Alert.vue";
-
+  import { Icon } from "@iconify/vue";
   export default {
     components: {
       Alert,
+      Icon,
     },
   };
 </script>

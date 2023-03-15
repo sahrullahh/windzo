@@ -7,9 +7,6 @@
   color: #f2f2f2;
 }
 
-body {
-  user-select: none;
-}
 body ::-moz-selection {
   /* Code for Firefox */
   color: white;

@@ -26,6 +26,7 @@
         v-if="!$route.meta.hideNav"
         @sidebarToggle="open"
       />
+
       <transition
         name="slide-up"
         mode="out-in"
