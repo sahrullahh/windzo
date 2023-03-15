@@ -1,7 +1,6 @@
 <template>
   <!-- Search component Badge with name of type, press Ctrl + F -->
-
-  <div class="Badge lg:h-screen h-auto p-3">
+  <div class="badge lg:h-screen h-auto p-3">
     <nav
       class="flex"
       aria-label="Breadcrumb"
@@ -210,3 +209,7 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default {};
+</script>

@@ -85,248 +85,335 @@
       <div
         class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
-        <h2 class="dark:text-gray-200">Default</h2>
+        <div class="pb-5 space-y-4">
+          <h2 class="dark:text-gray-200">Default alert</h2>
+          <p class="dark:text-gray-200">
+            you can change background colors by adding props and text in your
+            alert components.
+            <br /><br />
+            <span> example : </span>
+            <br />
+            <span class="text-red-500 bg-gray-200">background="blue-800"</span>
+            <br />
+            <span class="text-red-500 bg-gray-200">textColor="blue-800"</span>
+          </p>
+        </div>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
-          <div
-            class="primary-alert bg-blue-500 py-3 px-5 text-white w-full box-border rounded-md"
+          <alert
+            background="blue-500"
+            textColor="white"
           >
-            Hello iam primary and can also info alert
-          </div>
-          <div
-            class="success-alert bg-green-500 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content>
+              Hello iam primary and can also info alert
+            </template>
+          </alert>
+          <alert
+            background="green-500"
+            textColor="white"
           >
-            Hello iam alert success
-          </div>
-          <div
-            class="warning-alert bg-orange-500 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert success </template>
+          </alert>
+          <alert
+            background="orange-500"
+            textColor="white"
           >
-            Hello iam alert warning
-          </div>
-          <div
-            class="danger-alert bg-red-500 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert warning</template>
+          </alert>
+          <alert
+            background="red-500"
+            textColor="white"
           >
-            Hello iam alert danger
-          </div>
-          <div
-            class="dark-alert bg-gray-800 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert danger</template>
+          </alert>
+
+          <alert
+            background="gray-700"
+            textColor="white"
           >
-            Hello iam alert dark
-          </div>
-          <div
-            class="secondary-alert bg-gray-300 py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert dark </template>
+          </alert>
+          <alert
+            background="gray-300"
+            textColor="gray-800"
           >
-            Hello iam alert secondary
-          </div>
-          <div
-            class="light-alert bg-gray-100 py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert secondary </template>
+          </alert>
+
+          <alert
+            background="gray-100"
+            textColor="gray-800"
           >
-            Hello iam alert light
-          </div>
-          <div
-            class="light-alert bg-primary py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert light </template>
+          </alert>
+
+          <alert
+            background="primary"
+            textColor="white"
           >
-            Hello iam alert custom colors
-          </div>
+            <template v-slot:content> Hello iam alert custom colors </template>
+          </alert>
         </div>
       </div>
       <!-- heading alert  -->
       <div
         class="card row-span-2 bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
-        <h2 class="dark:text-gray-200">Heading</h2>
+        <div class="pb-5 space-y-4">
+          <h2 class="dark:text-gray-200">Heading</h2>
+          <p class="dark:text-gray-200">
+            to use heading text on your alert adding
+            <span class="text-red-500 bg-gray-200">v-slot:heading</span> on
+            alert components.
+          </p>
+        </div>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
-          <div
-            class="primary-alert bg-blue-500 py-3 px-5 text-white w-full box-border rounded-md"
+          <alert
+            background="blue-500"
+            textColor="white"
           >
-            <h1 class="text-xl font-bold">Windzo</h1>
-            Hello iam primary and can also info alert
-          </div>
-          <div
-            class="success-alert bg-green-500 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:heading> Windzo </template>
+            <template v-slot:content>
+              Hello iam primary and can also info alert
+            </template>
+          </alert>
+          <alert
+            background="green-500"
+            textColor="white"
           >
-            <h1 class="text-xl font-bold">Windzo</h1>
-            Hello iam alert success
-          </div>
-          <div
-            class="warning-alert bg-orange-500 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:heading> Windzo </template>
+            <template v-slot:content> Hello iam alert success </template>
+          </alert>
+          <alert
+            background="orange-500"
+            textColor="white"
           >
-            <h1 class="text-xl font-bold">Windzo</h1>
-            Hello iam alert warning
-          </div>
-          <div
-            class="danger-alert bg-red-500 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:heading> Windzo </template>
+            <template v-slot:content> Hello iam alert warning</template>
+          </alert>
+          <alert
+            background="red-500"
+            textColor="white"
           >
-            <h1 class="text-xl font-bold">Windzo</h1>
-            Hello iam alert danger
-          </div>
-          <div
-            class="dark-alert bg-gray-800 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:heading> Windzo </template>
+            <template v-slot:content> Hello iam alert danger</template>
+          </alert>
+
+          <alert
+            background="gray-700"
+            textColor="white"
           >
-            <h1 class="text-xl font-bold">Windzo</h1>
-            Hello iam alert dark
-          </div>
-          <div
-            class="secondary-alert bg-gray-300 py-3 px-5 text-gray-800 dark:text-gray-400 w-full box-border rounded-md"
+            <template v-slot:heading> Windzo </template>
+            <template v-slot:content> Hello iam alert dark </template>
+          </alert>
+          <alert
+            background="gray-300"
+            textColor="gray-800"
           >
-            <h1 class="text-xl font-bold">Windzo</h1>
-            Hello iam alert secondary
-          </div>
-          <div
-            class="light-alert bg-gray-100 py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            <template v-slot:heading> Windzo </template>
+            <template v-slot:content> Hello iam alert secondary </template>
+          </alert>
+
+          <alert
+            background="gray-100"
+            textColor="gray-800"
           >
-            <h1 class="text-xl font-bold">Windzo</h1>
-            Hello iam alert light
-          </div>
-          <div
-            class="light-alert bg-primary py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:heading> Windzo </template>
+            <template v-slot:content> Hello iam alert light </template>
+          </alert>
+
+          <alert
+            background="primary"
+            textColor="white"
           >
-            <h1 class="text-xl font-bold">Windzo</h1>
-            Hello iam alert custom colors
-          </div>
+            <template v-slot:heading> Windzo </template>
+            <template v-slot:content> Hello iam alert custom colors </template>
+          </alert>
         </div>
       </div>
       <!-- With icon alert -->
       <div
         class="card row-span-3 bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
-        <h2 class="dark:text-gray-200">With icon alert</h2>
+        <div class="pb-5 space-y-4">
+          <h2 class="dark:text-gray-200">With icon alert</h2>
+          <p class="dark:text-gray-200">
+            to use icon on your alert adding
+            <span class="text-red-500 bg-gray-200">v-slot:icon</span> and use
+            iconify for default or others.
+          </p>
+        </div>
+
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
-          <div
-            class="primary-alert bg-blue-500 flex py-3 px-5 text-white w-full box-border rounded-md"
+          <alert
+            background="blue-500"
+            :actionClose="false"
+            textColor="white"
           >
-            <span class="text-2xl mr-3">
+            <template v-slot:icon>
               <Icon icon="bytesize:info" />
-            </span>
-            <span> Hello iam primary and can also info alert </span>
-          </div>
-          <div
-            class="success-alert flex bg-green-500 py-3 px-5 text-white w-full box-border rounded-md"
+            </template>
+            <template v-slot:content>
+              Hello iam primary and can also info alert
+            </template>
+          </alert>
+          <alert
+            background="green-500"
+            :actionClose="false"
+            textColor="white"
           >
-            <span class="text-2xl mr-3">
+            <template v-slot:icon>
               <Icon icon="bi:check-circle" />
-            </span>
-            <span> Hello iam alert success </span>
-          </div>
-          <div
-            class="warning-alert bg-orange-500 flex py-3 px-5 text-white w-full box-border rounded-md"
+            </template>
+            <template v-slot:content> Hello iam alert success </template>
+          </alert>
+          <alert
+            background="orange-500"
+            :actionClose="false"
+            textColor="white"
           >
-            <span class="text-2xl mr-3">
+            <template v-slot:icon>
               <Icon icon="clarity:warning-line" />
-            </span>
-            <span> Hello iam alert warning </span>
-          </div>
-          <div
-            class="danger-alert bg-red-500 flex py-3 px-5 text-white w-full box-border rounded-md"
+            </template>
+            <template v-slot:content> Hello iam alert warning</template>
+          </alert>
+          <alert
+            background="red-500"
+            :actionClose="false"
+            textColor="white"
           >
-            <span class="text-2xl mr-3">
+            <template v-slot:icon>
               <Icon icon="ic:outline-dangerous" />
-            </span>
-            <span> Hello iam alert danger </span>
-          </div>
-          <div
-            class="dark-alert bg-gray-800 flex py-3 px-5 text-white w-full box-border rounded-md"
+            </template>
+            <template v-slot:content> Hello iam alert danger</template>
+          </alert>
+
+          <alert
+            background="gray-700"
+            :actionClose="false"
+            textColor="white"
           >
-            <span class="text-2xl mr-3">
-              <Icon icon="bxs:moon" />
-            </span>
-            <span> Hello iam alert dark </span>
-          </div>
-          <div
-            class="secondary-alert bg-gray-300 flex py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            <template v-slot:icon> <Icon icon="bxs:moon" /> </template>
+            <template v-slot:content> Hello iam alert dark </template>
+          </alert>
+          <alert
+            background="gray-300"
+            :actionClose="false"
+            textColor="gray-800"
           >
-            <span class="text-2xl mr-3">
+            <template v-slot:icon>
               <Icon icon="bx:cog" />
-            </span>
-            <span> Hello iam alert secondary </span>
-          </div>
-          <div
-            class="light-alert bg-gray-100 flex py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            </template>
+            <template v-slot:content> Hello iam alert secondary </template>
+          </alert>
+
+          <alert
+            background="gray-100"
+            :actionClose="false"
+            textColor="gray-800"
           >
-            <span class="text-2xl mr-3">
-              <Icon icon="ci:sun" />
-            </span>
-            <span> Hello iam alert light </span>
-          </div>
-          <div
-            class="light-alert bg-primary flex py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:icon> <Icon icon="ci:sun" /> </template>
+            <template v-slot:content> Hello iam alert light </template>
+          </alert>
+
+          <alert
+            background="primary"
+            textColor="white"
+            :actionClose="false"
           >
-            <span class="text-2xl mr-3">
+            <template v-slot:icon>
               <Icon icon="cib:visual-studio-code" />
-            </span>
-            <span> Hello iam alert custom colors </span>
-          </div>
+            </template>
+            <template v-slot:content> Hello iam alert custom colors </template>
+          </alert>
         </div>
       </div>
       <!-- Dismis alert  -->
       <div
         class="card row-span-4 bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700"
       >
-        <h2 class="dark:text-gray-200">Dismissable Alert</h2>
+        <div class="pb-5 space-y-4">
+          <h2 class="dark:text-gray-200">Dismissable Alert</h2>
+          <p class="dark:text-gray-200">
+            adding props
+            <span class="text-red-500 bg-gray-200">actionIcon to true </span> on
+            your alert components to use Dismissable alert
+          </p>
+          <p class="dark:text-gray-200">
+            and change the demo props to
+            <span class="text-red-500 bg-gray-200">false</span>, aiming not to
+            spawn the alert again
+          </p>
+        </div>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
-          <div
-            class="primary-alert bg-blue-500 py-3 px-5 text-white w-full box-border rounded-md"
+          <alert
+            background="blue-500"
+            :demo="true"
+            :actionClose="true"
+            textColor="white"
           >
-            Hello iam primary and can also info alert
-            <button class="alert-dismiss float-right text-2xl">
-              <Icon icon="la:times" />
-            </button>
-          </div>
-          <div
-            class="success-alert bg-green-500 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content>
+              Hello iam primary and can also info alert
+            </template>
+          </alert>
+          <alert
+            background="green-500"
+            :demo="true"
+            :actionClose="true"
+            textColor="white"
           >
-            Hello iam alert success
-            <button class="alert-dismiss float-right text-2xl">
-              <Icon icon="la:times" />
-            </button>
-          </div>
-          <div
-            class="warning-alert bg-orange-500 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert success </template>
+          </alert>
+          <alert
+            background="orange-500"
+            :demo="true"
+            :actionClose="true"
+            textColor="white"
           >
-            Hello iam alert warning
-            <button class="alert-dismiss float-right text-2xl">
-              <Icon icon="la:times" />
-            </button>
-          </div>
-          <div
-            class="danger-alert bg-red-500 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert warning</template>
+          </alert>
+          <alert
+            background="red-500"
+            :demo="true"
+            :actionClose="true"
+            textColor="white"
           >
-            Hello iam alert danger
-            <button class="alert-dismiss float-right text-2xl">
-              <Icon icon="la:times" />
-            </button>
-          </div>
-          <div
-            class="dark-alert bg-gray-800 py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert danger</template>
+          </alert>
+
+          <alert
+            background="gray-700"
+            :demo="true"
+            :actionClose="true"
+            textColor="white"
           >
-            Hello iam alert dark
-            <button class="alert-dismiss float-right text-2xl">
-              <Icon icon="la:times" />
-            </button>
-          </div>
-          <div
-            class="secondary-alert bg-gray-300 py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert dark </template>
+          </alert>
+          <alert
+            background="gray-300"
+            :demo="true"
+            :actionClose="true"
+            textColor="gray-800"
           >
-            Hello iam alert secondary
-            <button class="alert-dismiss float-right text-2xl">
-              <Icon icon="la:times" />
-            </button>
-          </div>
-          <div
-            class="light-alert bg-gray-100 py-3 px-5 text-gray-800 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert secondary </template>
+          </alert>
+
+          <alert
+            background="gray-100"
+            :demo="true"
+            :actionClose="true"
+            textColor="gray-800"
           >
-            Hello iam alert light
-            <button class="alert-dismiss float-right text-2xl">
-              <Icon icon="la:times" />
-            </button>
-          </div>
-          <div
-            class="light-alert bg-primary py-3 px-5 text-white w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert light </template>
+          </alert>
+
+          <alert
+            background="primary"
+            :demo="true"
+            textColor="white"
+            :actionClose="true"
           >
-            Hello iam alert custom colors
-            <button class="alert-dismiss float-right text-2xl">
-              <Icon icon="la:times" />
-            </button>
-          </div>
+            <template v-slot:content> Hello iam alert custom colors </template>
+          </alert>
         </div>
       </div>
       <!-- Light alert  -->
@@ -335,46 +422,83 @@
       >
         <h2 class="dark:text-gray-200">Light alert</h2>
         <div class="wrapper-alert grid grid-cols-1 gap-3 mt-3">
-          <div
-            class="primary-alert bg-blue-200 py-3 px-5 text-blue-800 border-2 border-blue-800 w-full box-border rounded-md"
+          <alert
+            :border="true"
+            borderColor="blue-800"
+            background="blue-200"
+            :actionClose="false"
+            textColor="blue-800"
           >
-            Hello iam primary and can also info alert
-          </div>
-          <div
-            class="success-alert bg-green-200 py-3 px-5 text-green-800 border-2 border-green-800 w-full box-border rounded-md"
+            <template v-slot:content>
+              Hello iam primary and can also info alert
+            </template>
+          </alert>
+          <alert
+            :border="true"
+            borderColor="green-800"
+            background="green-200"
+            :actionClose="false"
+            textColor="green-800"
           >
-            Hello iam alert success
-          </div>
-          <div
-            class="warning-alert bg-orange-200 py-3 px-5 text-orange-800 border-2 border-orange-800 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert success </template>
+          </alert>
+          <alert
+            :border="true"
+            borderColor="orange-800"
+            background="orange-200"
+            :actionClose="false"
+            textColor="orange-800"
           >
-            Hello iam alert warning
-          </div>
-          <div
-            class="danger-alert bg-red-200 py-3 px-5 text-red-800 border-2 border-red-800 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert warning</template>
+          </alert>
+          <alert
+            :border="true"
+            borderColor="red-800"
+            background="red-200"
+            :actionClose="false"
+            textColor="red-800"
           >
-            Hello iam alert danger
-          </div>
-          <div
-            class="dark-alert bg-gray-200 py-3 px-5 text-gray-800 border-2 border-gray-800 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert danger</template>
+          </alert>
+
+          <alert
+            :border="true"
+            borderColor="gray-800"
+            background="gray-700"
+            :actionClose="false"
+            textColor="gray-200"
           >
-            Hello iam alert dark
-          </div>
-          <div
-            class="secondary-alert bg-gray-300 py-3 px-5 text-gray-500 border-2 border-gray-500 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert dark </template>
+          </alert>
+          <alert
+            :border="true"
+            borderColor="800"
+            background="gray-300"
+            :actionClose="false"
+            textColor="gray-800"
           >
-            Hello iam alert secondary
-          </div>
-          <div
-            class="light-alert bg-gray-100 py-3 px-5 text-gray-500 border-2 border-gray-300 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert secondary </template>
+          </alert>
+
+          <alert
+            :border="true"
+            borderColor="800"
+            background="gray-100"
+            :actionClose="false"
+            textColor="gray-800"
           >
-            Hello iam alert light
-          </div>
-          <div
-            class="light-alert bg-indigo-200 py-3 px-5 text-indigo-800 border-2 border-indigo-800 w-full box-border rounded-md"
+            <template v-slot:content> Hello iam alert light </template>
+          </alert>
+
+          <alert
+            :border="true"
+            borderColor="800"
+            background="indigo-200"
+            textColor="indigo-800"
+            :actionClose="false"
           >
-            Hello iam alert custom colors
-          </div>
+            <template v-slot:content> Hello iam alert custom colors </template>
+          </alert>
         </div>
       </div>
     </div>
@@ -382,18 +506,11 @@
 </template>
 
 <script>
-  import { Icon } from "@iconify/vue";
+  import Alert from "@/components/Alert.vue";
+
   export default {
     components: {
-      Icon,
-    },
-    mounted() {
-      var alert_dis = document.querySelectorAll(".alert-dismiss");
-      alert_dis.forEach((x) =>
-        x.addEventListener("click", function () {
-          x.parentElement.classList.add("hidden");
-        })
-      );
+      Alert,
     },
   };
 </script>

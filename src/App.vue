@@ -26,7 +26,12 @@
         v-if="!$route.meta.hideNav"
         @sidebarToggle="open"
       />
-      <router-view />
+      <transition
+        name="slide-up"
+        mode="out-in"
+      >
+        <router-view />
+      </transition>
       <Footer v-if="!$route.meta.hideNav" />
     </div>
   </div>
@@ -34,8 +39,6 @@
 </template>
 
 <script>
-  import { alertDismis } from "@/helper/alert-dismis";
-
   // Vue components
   import Sidebar from "@/components/Sidebar";
   import Header from "@/components/Header";
@@ -59,8 +62,6 @@
       Sidebar,
     },
     methods: {
-      alertDismis,
-
       open() {
         this.sidebar = true;
       },
@@ -68,27 +69,33 @@
         this.sidebar = false;
       },
     },
+    watch: {
+      $route() {
+        this.sidebar = false;
+      },
+    },
     mounted() {
       Scrollbar.init(document.querySelector("#body-scroll"));
-
-      // this set globaly alert dismis
-      this.alertDismis(".alert-dismis");
     },
   };
 </script>
 
 <style>
-  .slide-enter-active {
+  /*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+  .slide-up-enter-active {
     transition: all 0.3s ease-out;
   }
 
-  .slide-leave-active {
+  .slide-up-leave-active {
     transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
   }
 
-  .slide-enter-from,
-  .slide-leave-to {
-    transform: translateX(-20px);
+  .slide-up-enter-from,
+  .slide-up-leave-to {
+    transform: translateY(20px);
     opacity: 0;
   }
 </style>
