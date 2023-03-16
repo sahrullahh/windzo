@@ -20,9 +20,7 @@
               />
             </div>
             <div class="space-y-3">
-              <h2
-                class="dark:text-white font-semibold hover:text-primary text-gray-800 text-4xl"
-              >
+              <h2 class="dark:text-white font-semibold text-gray-800 text-4xl">
                 Forgot your password?<span class="text-primary">.</span>
               </h2>
               <p class="dark:text-gray-400 text-gray-700">

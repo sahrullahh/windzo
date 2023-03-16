@@ -115,9 +115,20 @@
           <div class="item mt-3">
             <menu-accordion>
               <template v-slot:icon>
-                <Icon icon="bi:layout-wtf" />
+                <Icon icon="ri:layout-2-fill" />
               </template>
               <template v-slot:title> Layouts </template>
+              <template v-slot:content>
+                <p>Coming soon.</p>
+              </template>
+            </menu-accordion>
+          </div>
+          <div class="item mt-3">
+            <menu-accordion>
+              <template v-slot:icon>
+                <Icon icon="ri:pages-fill" />
+              </template>
+              <template v-slot:title> Pages </template>
               <template v-slot:content>
                 <div class="">
                   <router-link
@@ -150,25 +161,25 @@
                     </template>
                   </menu-accordion>
                   <menu-accordion>
-                    <template v-slot:title> Authentication Page</template>
+                    <template v-slot:title> Authentication </template>
                     <template v-slot:content>
                       <router-link
                         to="/auth/login"
                         class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                       >
-                        Login Page
+                        Login
                       </router-link>
                       <router-link
                         to="/auth/register"
                         class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                       >
-                        Register Page
+                        Register
                       </router-link>
                       <router-link
-                        to="/auth/forgot-pasword"
+                        to="/auth/forgot-password"
                         class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                       >
-                        Forgot Password Page
+                        Forgot Password
                       </router-link>
                     </template>
                   </menu-accordion>
@@ -189,7 +200,9 @@
               <Icon icon="ant-design:form-outlined" />
             </template>
             <template v-slot:title> Form Element </template>
-            <template v-slot:content> </template>
+            <template v-slot:content>
+              <p class="text-gray-800 dark:text-gray-500">Coming soon.</p>
+            </template>
           </menu-accordion>
         </div>
 
