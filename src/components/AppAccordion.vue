@@ -3,7 +3,7 @@
     @click="toggleAccordion()"
     class="text-gray-800 dark:text-gray-500 transition-all bg-transparent border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-200 w-full flex text-left rounded-md box-border p-3"
     :aria-expanded="isOpen"
-    :aria-controls="`collapse${_uid}`"
+    :aria-controls="`collapse${uid}`"
     :class="{
       'bg-gray-200 dark:bg-gray-700': isOpen,
       'bg-transparent': !isOpen,

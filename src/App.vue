@@ -4,7 +4,7 @@
     <div
       v-if="!$route.meta.hideNav"
       class="lg:block"
-      :class="{ 'lg:block hidden -left-60': !sidebar, block: sidebar }"
+      :class="{ 'lg:block hidden': !sidebar, block: sidebar }"
     >
       <div
         class="lg:flex-auto w-sidebar bg-white dark:bg-gray-800 border-r-2 dark:border-gray-700 lg:z-0 z-20 overflow-auto lg:relative fixed"

@@ -10,6 +10,7 @@ import Vbreadcumb from "../views/components/breadcumbs.vue";
 import Vbutton from "../views/components/button.vue";
 import Vcard from "../views/components/card.vue";
 import Vdropdown from "../views/components/dropdown.vue";
+import Vmodal from "../views/components/modal.vue";
 import Login from "../views/layouts/auth/Login.vue";
 import Register from "../views/layouts/auth/Register.vue";
 import ForgotPassword from "../views/layouts/auth/forgot-password.vue";
@@ -21,6 +22,8 @@ import Blank from "../views/layouts/Blank.vue";
 import Page404 from "../views/layouts/error/404.vue";
 import Page500 from "../views/layouts/error/500.vue";
 import PageMaintenance from "../views/layouts/error/maintenance.vue";
+import Tables from "../views/tables.vue";
+
 var appname = " - Windzo Dashboard Admin Template";
 
 const routes = [
@@ -75,6 +78,12 @@ const routes = [
     component: Vdropdown,
     meta: { title: "Dropdown" + appname },
   },
+  {
+    path: "/component/modal",
+    name: "Vmodal",
+    component: Vmodal,
+    meta: { title: "Modal" + appname },
+  },
   // layouts
 
   {
@@ -118,11 +127,19 @@ const routes = [
   },
   {
     path: "/maintenance",
-    name: "maintenanc",
+    name: "maintenance",
     component: PageMaintenance,
     meta: {
       title: "Sorry the app has been Maintenance" + appname,
       hideNav: true,
+    },
+  },
+  {
+    path: "/tables",
+    name: "Tables",
+    component: Tables,
+    meta: {
+      title: "Tables" + appname,
     },
   },
 ];

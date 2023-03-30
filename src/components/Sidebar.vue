@@ -109,6 +109,12 @@
                 >
                   Dropdown
                 </router-link>
+                <router-link
+                  to="/component/modal"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                >
+                  Modal
+                </router-link>
               </template>
             </menu-accordion>
           </div>
@@ -207,7 +213,7 @@
         </div>
 
         <div class="item mt-3">
-          <router-link to="/">
+          <router-link to="/tables">
             <button
               class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-200 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
             >
