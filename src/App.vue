@@ -50,7 +50,6 @@
   import Footer from "@/components/Footer";
   // npm-js
   import Scrollbar from "smooth-scrollbar";
-  import Sidebarlist from "./components/sidebarlist.vue";
 
   export default {
     name: "App",
@@ -66,7 +65,6 @@
       Header,
       Footer,
       Sidebar,
-      Sidebarlist,
     },
     methods: {
       open() {
