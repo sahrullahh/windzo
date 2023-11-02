@@ -8,24 +8,27 @@ export const useSidebar = defineStore({
   state: () => ({
     menu: [
       {
-        name: "Dashboard",
-        icon: "",
-        type: "default",
-        router: true,
-        url: "",
-      },
-      {
-        name: "Components",
-        icon: "",
-        type: "accordion",
-        router: true,
-        url: false,
-        isChildren: true,
+        name: "MENU",
         children: [
           {
-            name: "Alert",
-            icon: false,
+            name: "Dashboard",
+            icon: "bxs:dashboard",
             type: "default",
+            url: "/",
+          },
+          {
+            name: "Components",
+            icon: "",
+            type: "accordion",
+            url: false,
+            isChildren: true,
+            children: [
+              {
+                name: "Alert",
+                icon: false,
+                type: "default",
+              },
+            ],
           },
         ],
       },

@@ -76,8 +76,13 @@
                 <div class="modal-head p-5">
                   <div class="heading flex justify-between">
                     <div>
-                      <h2 class="dark:text-white">{{ title }}</h2>
-                      <p class="subtitle">{{ subtitle }}</p>
+                      <div>
+                        <slot name="Icon" />
+                      </div>
+                      <div>
+                        <h2 class="dark:text-white">{{ title }}</h2>
+                        <p class="subtitle">{{ subtitle }}</p>
+                      </div>
                     </div>
                     <div>
                       <button

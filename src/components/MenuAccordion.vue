@@ -16,7 +16,7 @@
       <slot name="title" />
     </span>
     <span
-      class="box-border mt-1 text-gray-500 dark:text-gray-500"
+      class="box-border mt-1 transition-all text-gray-500 dark:text-gray-500"
       :class="{
         'rotate-180': isOpen,
         'rotate-0': !isOpen,
@@ -29,8 +29,9 @@
   </button>
 
   <div
-    class="dark:bg-gray-900 bg-gray-100 rounded-md mt-2 p-2"
+    class="dark:bg-gray-900 transition-all bg-gray-100 rounded-md mt-2 p-2"
     v-show="isOpen"
+    :class="{ 'h-auto': isOpen, 'h-0': !isOpen }"
     :id="`collapse${_uid}`"
   >
     <slot name="content" />

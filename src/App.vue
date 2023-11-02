@@ -14,6 +14,10 @@
             v-if="!$route.meta.hideNav"
             @sidebarToggle="close"
           />
+          <!-- <sidebarlist
+            v-if="!$route.meta.hideNav"
+            @sidebarToggle="close"
+          /> -->
         </perfect-scrollbar>
       </div>
     </div>
@@ -46,6 +50,7 @@
   import Footer from "@/components/Footer";
   // npm-js
   import Scrollbar from "smooth-scrollbar";
+  import Sidebarlist from "./components/sidebarlist.vue";
 
   export default {
     name: "App",
@@ -61,6 +66,7 @@
       Header,
       Footer,
       Sidebar,
+      Sidebarlist,
     },
     methods: {
       open() {
