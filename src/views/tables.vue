@@ -1,5 +1,3 @@
-import Tables from '@/components/Tables.vue';
-
 <template>
   <div>
     <Tables />
